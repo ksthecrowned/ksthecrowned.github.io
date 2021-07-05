@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #FF9A9E 10%, #F6416C 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body::after,
+body::before {
+    content: '';
+    position: absolute;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .4;
+    z-index: -1;
+}
+
+body::before {
+    clip-path: circle(30% at left 20%);
+    background: linear-gradient(135deg, #F6416C 10%, #FF9A9E 100%);
+}
+
+body::after {
+    clip-path: circle(25% at right 80%);
+    background: linear-gradient(135deg, #F6416C 10%, #FF9A9E 50%);
+}
+
+@media (min-width: 600px) {
+    header {
+        background: rgba(255, 255, 255, .1);
+        backdrop-filter: blur(5px);
+        margin: auto;
+        border-radius: 15px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .15);
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        border-left: 1px solid rgba(255, 255, 255, .1);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 100vh;
+        /* background: rgb(92, 91, 91); */
+    }
+}
+
+footer {
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(5px);
+    margin: auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .15);
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-left: 1px solid rgba(255, 255, 255, .1);
+}
+
+/* styles the progress bars */
+progress::-webkit-progress-value {
+    background: rgba(255, 0, 0, 0.4);
+    height: 20px;
+    border-radius: 20px;
+}
+progress::-webkit-progress-bar {
+    background: lightgrey;
+    border-radius: 20px;
+    height: 20px;
+}
+
+/* --------------------------------- */
+
+.text-js{
+    opacity: 0;
+}
+
+@keyframes flash{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.img-shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 
+                -25px 25px 0 rgba(255, 0, 0, 0.4), 
+                15px 35px 0 rgba(255, 0, 0, 0.4), 
+                25px -25px 0 rgba(104, 226, 253, 0.6), 
+                -12px -35px 0 rgba(104, 226, 253, 0.655);
+}
+
+/* ----------------------------- */
+.filterDiv {
+    display: none;
+
+    transition: display 4s ease;
+}
+  
+.show {
+    display: block;
+}
+
+.btn.active {
+    background-color: #5f5f5f;
+    color: white;
+}

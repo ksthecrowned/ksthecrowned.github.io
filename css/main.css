@@ -1,0 +1,59 @@
+/* styles the progress bars */
+progress::-webkit-progress-value {
+    background: rgba(255, 0, 0, 0.407);
+    height: 20px;
+    border-radius: 20px;
+}
+progress::-webkit-progress-bar {
+    background: lightgrey;
+    border-radius: 20px;
+    height: 20px;
+}
+
+.custom-color {
+    color: #5592bc;
+}
+
+/* for socilas icons */
+.socials li:hover a svg {
+    transform: scale(.6) rotate(360deg);
+    transition: .5s;
+}
+
+/* animate the hero svg */
+.animate-y {
+    animation: animate-y 8s linear infinite;
+}
+@keyframes animate-y {
+    0%, 100% {
+        transform: translateY(1px);
+    }
+    50% {
+     transform: translateY(20px);
+    }
+}
+
+/* animate the contact me button */
+.animate-btn {
+    animation: animate-btn .3s linear infinite;
+}
+@keyframes animate-btn {
+    0%, 100% {
+        transform: translateY(1px);
+    }
+    50% {
+     transform: translateY(5px);
+    }
+}
+
+/* fancy animation */
+span .fancy_s {
+    opacity: 0;
+    transition: all 0.4s;
+    transform: translateY(-50px);
+    display: inline-block;
+}
+span.fade {
+    opacity: 1;
+    transform: translateY(0);
+}
