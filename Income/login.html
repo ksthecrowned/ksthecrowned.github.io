@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png"/>
+    <link rel="stylesheet" href="./assets/css/font-awesome/all.css"/>
+    <link rel="stylesheet" href="./assets/css/compiled-tailwind.css"/>
+    <title>Login</title>
+  </head>
+  <body class="text-gray-800 antialiased">
+    <nav class="top-0 bg-white fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
+      <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+        <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+          <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-gray-800"
+             href="#">Team IncomeLand
+          </a>
+          <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
+            onclick="toggleNavbar('example-collapse-navbar')">
+            <i class="text-gray-800 fas fa-bars"></i>
+          </button>
+        </div>
+        <div class="lg:flex flex-grow items-center lg:shadow-none hidden" id="example-collapse-navbar">
+          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto py-2">
+            <li class="flex items-center text-sm font-medium text-blueGray-700 hover:text-blueGray-500 uppercase px-4 py-2">
+              <a href="#"><i class="fa fa-home mr-2 text-sm md:hidden"></i> Home</a>
+            </li>
+            <li class="flex items-center text-sm font-medium text-blueGray-700 hover:text-blueGray-500 uppercase px-4 py-2">
+              <a href="#"><i class="fa fa-grin-squint mr-2 text-sm md:hidden"></i> Services</a>
+            </li>
+            <li class="flex items-center text-sm font-medium text-blueGray-700 hover:text-blueGray-500 uppercase px-4 py-2">
+              <a href="#"><i class="fa fa-dollar-sign mr-2 text-sm md:hidden"></i> Pricing</a>
+            </li>
+            <li class="flex items-center text-sm font-medium text-blueGray-700 hover:text-blueGray-500 uppercase px-4 py-2">
+              <a href="#"><i class="fa fa-question-circle mr-2 text-sm md:hidden"></i> About</a>
+            </li>
+            <li class="flex items-center mt-4 md:mt-0">
+              <button class="border border-purple-600 text-gray-900 active:bg-gray-100 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+               style="transition: all 0.15s ease 0s;">
+                <i class="fas fa-user-circle mr-2"></i> Login
+              </button>
+            </li>
+            <li class="flex items-center">
+              <button class="bg-purple-600 text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+               style="transition: all 0.15s ease 0s;">
+                <i class="fas fa-user-circle mr-2"></i> Register
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="relative pb-16 flex content-center items-center justify-center" style="min-height: 50vh;">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover"
+            style='background: url("./assets/img/bg.jpeg");'>
+          <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+        </div>
+        <div class="container relative mx-auto">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+              <div class="mt-12 sm:pr-12">
+                <h1 class="text-white font-semibold lg:text-5xl text-3xl">
+                  Login to your account
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden" style="height: 70px;">
+          <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100"x="0" y="0">
+            <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
+      </div>
+      <section class="bg-gray-300 -mt-24">
+        <div class="container mx-auto px-4">
+          <div class="flex justify-center">
+            <div class="w-full md:w-4/12">
+                <div class="relative z-10 py-4 px-6 flex flex-col bg-white mb-6 shadow-lg rounded-lg">
+                    <form action="#" class="flex flex-col my-4">
+                        <div class="flex flex-col">
+                            <label for="email" class="text-sm font-semibold text-gray-500">Email address</label>
+                            <input type="email" id="email" class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-gray-500 focus:outline-none" />
+                        </div>
+                        <div class="flex flex-col mt-4">
+                            <div class="flex items-center justify-between">
+                                <label for="password" class="text-sm font-semibold text-gray-500">Password</label>
+                                <a href="#" class="text-sm text-blue-600 hover:underline focus:text-blue-800">Forgot Password?</a>
+                            </div>
+                            <input type="password" id="password" class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-gray-500 focus:outline-none" />
+                        </div>
+                        <div class="flex items-center mt-4">
+                            <input type="checkbox" id="remember" class="w-4 h-4 transition duration-300 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-blue-200" />
+                            <label for="remember" class="text-sm font-semibold text-gray-500">&nbsp;Remember me</label>
+                        </div>
+                        <div class="mt-4">
+                            <button type="submit" class="w-full px-4 py-2 text-lg text-white font-semibold bg-purple-600 rounded-lg shadow focus:outline-none">
+                                Login
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="relative bg-gray-300 pt-8 pb-6">
+      <div class="container mx-auto px-4">
+        <hr class="my-6 border-gray-400" />
+        <div class="flex flex-wrap items-center md:justify-between justify-center">
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-gray-600 font-semibold py-1">
+              Copyright © 2021 ThisWebSite
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
+</html>
