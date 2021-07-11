@@ -7,69 +7,23 @@
     <link rel="shortcut icon" href="./assets/img/favicon.ico" />
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png"/>
     <link rel="stylesheet" href="./assets/css/font-awesome/all.css"/>
-    <link rel="stylesheet" href="./assets/css/compiled-tailwind.css"/>
+    <link rel="stylesheet" href="./assets/css/tailwind.css"/>
     <title>Landing</title>
   </head>
   <body class="text-gray-800 antialiased">
-    <nav class="top-0 bg-white fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
-      <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-        <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-          <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-gray-800"
-             href="#">Team IncomeLand
-          </a>
-          <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
-            onclick="toggleNavbar('example-collapse-navbar')">
-            <i class="text-gray-800 fas fa-bars"></i>
-          </button>
-        </div>
-        <div class="lg:flex flex-grow items-center lg:shadow-none hidden" id="example-collapse-navbar">
-          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto py-2">
-            <li class="flex items-center text-sm font-medium text-blueGray-700 hover:text-blueGray-500 uppercase px-4 py-2">
-              <a href="#"><i class="fa fa-home mr-2 text-sm md:hidden"></i> Home</a>
-            </li>
-            <li class="flex items-center text-sm font-medium text-blueGray-700 hover:text-blueGray-500 uppercase px-4 py-2">
-              <a href="#"><i class="fa fa-grin-squint mr-2 text-sm md:hidden"></i> Services</a>
-            </li>
-            <li class="flex items-center text-sm font-medium text-blueGray-700 hover:text-blueGray-500 uppercase px-4 py-2">
-              <a href="#"><i class="fa fa-dollar-sign mr-2 text-sm md:hidden"></i> Pricing</a>
-            </li>
-            <li class="flex items-center text-sm font-medium text-blueGray-700 hover:text-blueGray-500 uppercase px-4 py-2">
-              <a href="#"><i class="fa fa-question-circle mr-2 text-sm md:hidden"></i> About</a>
-            </li>
-            <li class="flex items-center mt-4 md:mt-0">
-              <button class="border border-purple-600 text-gray-900 active:bg-gray-100 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
-               style="transition: all 0.15s ease 0s;">
-                <i class="fas fa-user-circle mr-2"></i> Login
-              </button>
-            </li>
-            <li class="flex items-center">
-              <button class="bg-purple-600 text-white active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
-               style="transition: all 0.15s ease 0s;">
-                <i class="fas fa-user-circle mr-2"></i> Register
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     <main>
       <div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 80vh;">
-        <div class="absolute top-0 w-full h-full bg-center bg-cover"
-            style='background: url("./assets/img/bg.jpeg");'>
-          <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+        <div class="absolute top-0 w-full h-full">
+          <img class="h-full w-full object-cover" src="./assets/img/bg.jpg" alt="">
         </div>
-        <div class="container relative mx-auto">
-          <div class="items-center flex flex-wrap">
-            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-              <div class="mt-12 sm:pr-12">
-                <h1 class="text-white font-semibold text-5xl">
-                  Start earning money with us.
-                </h1>
-                <p class="mt-4 text-lg text-gray-300">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quam natus explicabo illo beatae molestiae aliquid, harum commodi deserunt quis aut. Adipisci temporibus fugiat unde illum optio deleniti tempore officia?
-                </p>
-              </div>
-            </div>
+        <div class="absolute top-0 w-full h-full bg-black bg-opacity-80">
+          <div class="w-8/12 h-full mx-auto flex flex-col space-y-6 items-center justify-center text-white text-center">
+            <h1 class="text-4xl md:text-5xl font-medium tracking-wide leading-10">
+              Invest in Trading & Start Earning Money with us
+            </h1>
+            <p class="text-lg">
+              One of the easiest way to earn money on the internet.
+            </p>
           </div>
         </div>
         <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden" style="height: 70px;">
@@ -143,23 +97,11 @@
                 go. Just make sure you enable them first via JavaScript.
               </p>
             </div>
-            <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
-              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-purple-600">
-                <img alt="..." src="./assets/img/team-2-800x800.jpg" class="w-full align-middle rounded-t-lg"/>
-                <blockquote class="relative p-8 mb-4">
-                  <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
-                    <polygon points="-30,95 583,95 583,65" class="text-purple-600 fill-current"></polygon>
-                  </svg>
-                  <h4 class="text-xl font-bold text-white">
-                    Top Notch Services
-                  </h4>
-                  <p class="text-md font-light mt-2 text-white">
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens.
-                  </p>
-                </blockquote>
-              </div>
+            <div class="w-full md:w-4/12 px-4 my-8 mr-auto ml-auto text-center">
+              <a href="login.html" class="bg-purple-600 px-8 py-6 rounded-full text-white text-xl font-medium transform hover:scale-105" 
+              style="box-shadow: 12px 14px rgba(222, 0, 234, 0.5), -12px -14px rgba(54, 155, 224, .5), -20px 24px rgba(145, 234, 426, .5);">
+                Get started
+              </a>
             </div>
           </div>
         </div>
@@ -234,6 +176,102 @@
           </div>
         </div>
       </section>
+      <section class="my-8">
+        <div class="container mx-auto px-4">
+          <div class="w-full px-4 mb-12 text-center">
+            <h2 class="text-4xl font-semibold">Our plans</h2>
+          </div>
+          <div class="flex flex-wrap">
+            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-purple-600">
+                    <img alt="..." src="./assets/img/team-2-800x800.jpg" class="w-full align-middle rounded-t-lg"/>
+                    <blockquote class="relative pt-8 px-8 mb-4">
+                      <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
+                        <polygon points="-30,95 583,95 583,65" class="text-purple-600 fill-current"></polygon>
+                      </svg>
+                      <h4 class="text-2xl font-bold text-white">
+                        First Plan
+                      </h4>
+                      <p class="text-lg mt-2 text-white">
+                        Invest $10 - $29 
+                      </p>
+                      <p class="text-lg mt-2 text-white">
+                        Gain 2.33% per day
+                      </p>
+                      <p class="text-lg mt-2 text-white">
+                        Instant Withdraw
+                      </p>
+                      <p class="text-lg mt-2 text-white">
+                        Mim Withdraw $10
+                      </p>
+                      <p class="text-lg mt-2 text-white">
+                        Withdraw fees 5%
+                      </p>
+                    </blockquote>
+                    <a href="#" class="mb-8 mt-4 bg-white w-6/12 mx-auto p-2 rounded-full uppercase font-medium">Choose plan</a>
+                </div>
+            </div>
+            <div class="w-full md:w-4/12 px-4 text-center">
+                <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-purple-600">
+                    <img alt="..." src="./assets/img/team-2-800x800.jpg" class="w-full align-middle rounded-t-lg"/>
+                    <blockquote class="relative pt-8 px-8 mb-4">
+                      <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
+                        <polygon points="-30,95 583,95 583,65" class="text-purple-600 fill-current"></polygon>
+                      </svg>
+                      <h4 class="text-2xl font-bold text-white">
+                        Second Plan
+                      </h4>
+                      <p class="text-lg mt-2 text-white">
+                        Invest $30 - $99 
+                      </p>
+                      <p class="text-lg mt-2 text-white">
+                        Gain 3.33% per day
+                      </p>
+                      <p class="text-lg mt-2 text-white">
+                        Instant Withdraw
+                      </p>
+                      <p class="text-lg mt-2 text-white">
+                        Mim Withdraw $10
+                      </p>
+                      <p class="text-lg mt-2 text-white">
+                        Withdraw fees 5%
+                      </p>
+                    </blockquote>
+                    <a href="#" class="mb-8 mt-4 bg-white w-6/12 mx-auto p-2 rounded-full uppercase font-medium">Choose plan</a>
+                </div>
+            </div>
+            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-purple-600">
+                    <img alt="..." src="./assets/img/team-2-800x800.jpg" class="w-full align-middle rounded-t-lg"/>
+                    <blockquote class="relative pt-8 px-8 mb-4">
+                      <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
+                        <polygon points="-30,95 583,95 583,65" class="text-purple-600 fill-current"></polygon>
+                      </svg>
+                      <h4 class="text-2xl font-bold text-white">
+                        Third Plan
+                      </h4>
+                      <p class="text-lg mt-2 text-white">
+                        Invest $100 +
+                      </p>
+                      <p class="text-lg mt-2 text-white">
+                        Gain 4% per day
+                      </p>
+                      <p class="text-lg mt-2 text-white">
+                        Instant Withdraw
+                      </p>
+                      <p class="text-lg mt-2 text-white">
+                        Mim Withdraw $10
+                      </p>
+                      <p class="text-lg mt-2 text-white">
+                        Withdraw fees 5%
+                      </p>
+                    </blockquote>
+                    <a href="#" class="mb-8 mt-4 bg-white w-6/12 mx-auto p-2 rounded-full uppercase font-medium">Choose plan</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="pt-10 pb-20">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap justify-center text-center">
@@ -244,9 +282,14 @@
               </p>
             </div>
           </div>
-          <div class="flex flex-wrap md:flex-nowrap justify-between">
-            <div class="w-full md:w-3/12 lg:mb-0 px-4">
-              <div class="px-6 rounded-lg shadow-lg py-6 border">
+          <div class="flex justify-between overflow-x-scroll test">
+            <style>
+              .test::-webkit-scrollbar {
+                display: none;
+              }
+            </style>
+            <div style="min-width: 400px;" class=" lg:mb-0 px-4 pb-6">
+              <div class="px-6 rounded-lg shadow-xl py-6 bg-white">
                 <img alt="..." src="./assets/img/team-1-800x800.jpg"
                   class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;"/>
                 <div class="pt-6 text-center">
@@ -256,14 +299,31 @@
                   </p>
                   <div class="mt-6">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus laboriosam at iste atque hic rerum, minus delectus voluptatum magni, distinctio deleniti. Dolorum illum impedit inventore quas aliquid! Fuga, debitis officiis!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w-full md:w-3/12 lg:mb-0 px-4">
-              <div class="px-6 rounded-lg shadow-lg py-6 border">
+            <div style="min-width: 400px;" class=" lg:mb-0 px-4 pb-6">
+              <div class="px-6 rounded-lg shadow-xl py-6 bg-white">
+                <img alt="..." src="./assets/img/team-1-800x800.jpg"
+                  class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;"/>
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold">Ryan Tompson</h5>
+                  <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    From India
+                  </p>
+                  <div class="mt-6">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="min-width: 400px;" class=" lg:mb-0 px-4 pb-6">
+              <div class="px-6 rounded-lg shadow-xl py-6 bg-white">
                 <img alt="..." src="./assets/img/team-3-800x800.jpg"
                   class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;"/>
                 <div class="pt-6 text-center">
@@ -273,14 +333,14 @@
                   </p>
                   <div class="mt-6">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus laboriosam at iste atque hic rerum, minus delectus voluptatum magni, distinctio deleniti. Dolorum illum impedit inventore quas aliquid! Fuga, debitis officiis!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w-full md:w-3/12 lg:mb-0 px-4">
-              <div class="px-6 rounded-lg shadow-lg py-6 border">
+            <div style="min-width: 400px;" class=" lg:mb-0 px-4 pb-6">
+              <div class="px-6 rounded-lg shadow-xl py-6 bg-white">
                 <img alt="..." src="./assets/img/team-2-800x800.jpg"
                   class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;"/>
                 <div class="pt-6 text-center">
@@ -290,7 +350,7 @@
                   </p>
                   <div class="mt-6">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus laboriosam at iste atque hic rerum, minus delectus voluptatum magni, distinctio deleniti. Dolorum illum impedit inventore quas aliquid! Fuga, debitis officiis!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                   </div>
                 </div>
@@ -355,93 +415,8 @@
         </div>
       </section>
     </main>
-    <footer class="relative bg-gray-300 pt-8 pb-6">
-      <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 80px;">
-        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-          <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
+    <footer class="relative bg-gray-300 py-8">
       <div class="container mx-auto px-4">
-        <div class="flex flex-wrap">
-          <div class="w-full lg:w-6/12 px-4">
-            <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
-            <h5 class="text-lg mt-0 mb-2 text-gray-700">
-              Find us on any of these platforms, we respond 1-2 business days.
-            </h5>
-            <div class="mt-6">
-              <button class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3">
-                <i class="flex fab fa-twitter"></i>
-              </button>
-              <button class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3">
-                <i class="flex fab fa-facebook-square"></i>
-              </button>
-              <button class="bg-white text-purple-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3">
-                <i class="flex fab fa-dribbble"></i>
-              </button>
-              <button class="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3">
-                <i class="flex fab fa-github"></i>
-              </button>
-            </div>
-          </div>
-          <div class="w-full lg:w-6/12 px-4">
-            <div class="flex flex-wrap items-top my-6">
-              <div class="w-full lg:w-4/12 px-4 ml-auto">
-                <span class="block uppercase text-gray-600 text-sm font-semibold mb-2"
-                  >Useful Links</span>
-                <ul class="list-unstyled">
-                  <li>
-                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="#">About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="#">Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="#">Github
-                    </a>
-                  </li>
-                  <li>
-                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="#">Free Products
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="w-full lg:w-4/12 px-4">
-                <span class="block uppercase text-gray-600 text-sm font-semibold mb-2"
-                  >Other Resources
-                </span>
-                <ul class="list-unstyled">
-                  <li>
-                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="#">MIT License
-                    </a>
-                  </li>
-                  <li>
-                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="#" >Terms &amp; Conditions
-                    </a>
-                  </li>
-                  <li>
-                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="#">Privacy Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="#">Contact Us
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr class="my-6 border-gray-400" />
         <div class="flex flex-wrap items-center md:justify-between justify-center">
           <div class="w-full md:w-4/12 px-4 mx-auto text-center">
             <div class="text-sm text-gray-600 font-semibold py-1">
@@ -452,10 +427,4 @@
       </div>
     </footer>
   </body>
-  <script>
-    function toggleNavbar(collapseID) {
-      document.getElementById(collapseID).classList.toggle("hidden");
-      document.getElementById(collapseID).classList.toggle("block");
-    }
-  </script>
 </html>
