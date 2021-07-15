@@ -1,0 +1,98 @@
+[
+  {
+    "question": "La date d'anniversaire de Styve est le...",
+    "choice1": "26 Juillet",
+    "choice2": "12 Mai",
+    "choice3": "26 Mars",
+    "choice4": "1er Jnavier",
+    "answer": 3
+  },
+  {
+    "question": "Quel est le lieu de naissance de Styve?",
+    "choice1": "Dolisie",
+    "choice2": "Pointe-Noire",
+    "choice3": "Brazzaville",
+    "choice4": "Nkayi",
+    "answer": 2
+  },
+  {
+    "question": "Combien de cm penses-tu que Styve mésure?",
+    "choice1": "187cm",
+    "choice2": "165cm",
+    "choice3": "1cm",
+    "choice4": "200cm",
+    "answer": 1
+  },
+  {
+    "question": "Quel est l'équipe de foot favorite de Styve?",
+    "choice1": "FC Barcelone",
+    "choice2": "Real Madrid",
+    "choice3": "Bayern Munich",
+    "choice4": "Paris Saint Germain",
+    "answer": 3
+  },
+  {
+    "question": "Quel est le joueur de foot préféré de Styve?",
+    "choice1": "R. Lewandowski",
+    "choice2": "L. Messi",
+    "choice3": "Neymar Jr",
+    "choice4": "C. Ronaldo",
+    "answer": 1
+  },
+  {
+    "question": "Quel est selon Styve l'animé du siècle?",
+    "choice1": "Attaque de titans",
+    "choice2": "Naruto",
+    "choice3": "L'école des champions",
+    "choice4": "Draggon Ball Z",
+    "answer": 1
+  },
+  {
+    "question": "Quel est le personnage d'animé favoris de Styve?",
+    "choice1": "Naruto Uzumaki",
+    "choice2": "Eren Jeager",
+    "choice3": "Minato Namikazé",
+    "choice4": "Son Goku",
+    "answer": 2
+  },
+  {
+    "question": "Quel est le super héro préferé de Styve?",
+    "choice1": "Thor",
+    "choice2": "Iron Man",
+    "choice3": "Spider Man",
+    "choice4": "Super Man",
+    "answer": 2
+  },
+  {
+    "question": "Que penses-tu qu'aurait choisit Styve de faire pendant toute une journée",
+    "choice1": "Coder",
+    "choice2": "Jouer aux jeux vidéos",
+    "choice3": "Se balader",
+    "choice4": "Regarder la télé",
+    "answer": 1
+  },
+  {
+    "question": "Quel est la signification de Styve?",
+    "choice1": "Le prince",
+    "choice2": "La couronne",
+    "choice3": "Kaiser",
+    "choice4": "Le couronné",
+    "answer": 4
+  },
+  {
+    "question": "Quel est le prénom de la maman de Styve?",
+    "choice1": "Bartelle",
+    "choice2": "Partelle",
+    "choice3": "Clode",
+    "choice4": "Claudicia",
+    "answer": 2
+  },
+  {
+    "question": "Styve est...",
+    "choice1": "Dévéloppeur Web",
+    "choice2": "Dévéloppeur Mobile",
+    "choice3": "Web designer",
+    "choice4": "Un con",
+    "answer": 1
+  }
+]
