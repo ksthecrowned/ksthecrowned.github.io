@@ -8,14 +8,14 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 const MAX_HIGH_SCORES = 5;
 
 if (mostRecentScore >= 40) {
-    finalScore.innerText = `Félicitations, tu connais Styve à ${mostRecentScore}%`;
+    finalScore.innerHTML = `<h2 id="finalScore">Félicitations, tu connais très bien Styve. <br> .........| ton score: ${mostRecentScore}%</h2>`;
 } else if (mostRecentScore == 0) {
-    finalScore.innerText = `Tu ne connais pas du tout Styve... ${mostRecentScore}%`;
+    finalScore.innerHTML = `<h2 id="finalScore">Désolé, tu ne connais pas du tout Styve. <br> ......... | ton score: ${mostRecentScore}%`;
 } else if (mostRecentScore == 100) {
-    finalScore.innerText = `Félicitations, tu connais très bien Styve... ${mostRecentScore}%`;
+    finalScore.innerHTML = `<h2 id="finalScore">Félicitations, tu connais parfaitement Styve. <br> ......... | ton score: ${mostRecentScore}%`;
 }
  else {
-    finalScore.innerText = `Désolé, tu connais très peu Styve... ${mostRecentScore}%`; 
+    finalScore.innerHTML = `<h2 id="finalScore">Tu ne connais Styve que très peu. <br> ......... | ton score: ${mostRecentScore}%</h2>`; 
 }
 
 username.addEventListener('keyup', () => {
