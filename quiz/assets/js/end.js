@@ -1,22 +1,24 @@
 const username = document.getElementById('username');
 const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
+const finalScoreInt = document.getElementById('finalScore-int');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 const MAX_HIGH_SCORES = 5;
 
-if (mostRecentScore >= 40) {
-    finalScore.innerHTML = `<h2 id="finalScore">Félicitations, tu connais très bien Styve. <br> .........| ton score: ${mostRecentScore}%</h2>`;
-} else if (mostRecentScore == 0) {
-    finalScore.innerHTML = `<h2 id="finalScore">Désolé, tu ne connais pas du tout Styve. <br> ......... | ton score: ${mostRecentScore}%`;
+if (mostRecentScore == 0) {
+    finalScore.innerHTML = `<h2 id="finalScore">Désolé, tu ne connais pas du tout Styve.`;
 } else if (mostRecentScore == 100) {
-    finalScore.innerHTML = `<h2 id="finalScore">Félicitations, tu connais parfaitement Styve. <br> ......... | ton score: ${mostRecentScore}%`;
+    finalScore.innerHTML = `<h2 id="finalScore">Félicitations, tu connais parfaitement Styve.`;
+} else if (mostRecentScore >= 40) {
+    finalScore.innerHTML = `<h2 id="finalScore">Félicitations, tu connais assez bien Styve.`;
+} else {
+    finalScore.innerHTML = `<h2 id="finalScore">Désolé, tu ne connais pas assez Styve.`;
 }
- else {
-    finalScore.innerHTML = `<h2 id="finalScore">Tu ne connais Styve que très peu. <br> ......... | ton score: ${mostRecentScore}%</h2>`; 
-}
+finalScoreInt.innerHTML = `Score: ${mostRecentScore}%`;
+
 
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value;
@@ -35,5 +37,5 @@ saveHighScore = (e) => {
     highScores.splice(5);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign('quiz/');
+    window.location.assign('https://ksthecrowned.github.io/quiz/highscores.html');
 };

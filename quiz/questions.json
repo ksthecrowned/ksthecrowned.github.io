@@ -1,10 +1,10 @@
 [
   {
-    "question": "La date d'anniversaire de Styve est le...",
+    "question": "Quelle est la d'anniversaire de Styve?",
     "choice1": "26 Juillet",
     "choice2": "12 Mai",
     "choice3": "26 Mars",
-    "choice4": "1er Jnavier",
+    "choice4": "1er Janvier",
     "answer": 3
   },
   {
@@ -16,12 +16,12 @@
     "answer": 2
   },
   {
-    "question": "Combien de cm penses-tu que Styve mésure?",
-    "choice1": "187cm",
-    "choice2": "165cm",
-    "choice3": "1cm",
-    "choice4": "200cm",
-    "answer": 1
+    "question": "Quel est le film préféré de Styve?",
+    "choice1": "Qu'est-ce qu'on a fait au bon Dieu?",
+    "choice2": "John Wick 3",
+    "choice3": "Iron Man 4",
+    "choice4": "Avenger End Game",
+    "answer": 4
   },
   {
     "question": "Quel est l'équipe de foot favorite de Styve?",
@@ -48,7 +48,7 @@
     "answer": 1
   },
   {
-    "question": "Quel est le personnage d'animé favoris de Styve?",
+    "question": "Quel est le personnage d'animé préféré de Styve?",
     "choice1": "Naruto Uzumaki",
     "choice2": "Eren Jeager",
     "choice3": "Minato Namikazé",
@@ -64,35 +64,91 @@
     "answer": 2
   },
   {
-    "question": "Que penses-tu qu'aurait choisit Styve de faire pendant toute une journée",
-    "choice1": "Coder",
-    "choice2": "Jouer aux jeux vidéos",
-    "choice3": "Se balader",
-    "choice4": "Regarder la télé",
+    "question": "Que ferait Styve s'il avait 1 million de dollar?",
+    "choice1": "Il ferait la fête",
+    "choice2": "Il achèterait une voiture",
+    "choice3": "Il construirait",
+    "choice4": "Il investirait",
     "answer": 1
   },
   {
-    "question": "Quel est la signification de Styve?",
+    "question": "Quel est la signification de \"Styve\"?",
     "choice1": "Le prince",
     "choice2": "La couronne",
-    "choice3": "Kaiser",
+    "choice3": "Le Kaiser",
     "choice4": "Le couronné",
     "answer": 4
   },
   {
-    "question": "Quel est le prénom de la maman de Styve?",
-    "choice1": "Bartelle",
-    "choice2": "Partelle",
-    "choice3": "Clode",
-    "choice4": "Claudicia",
+    "question": "Quelle est la série préféré de Styve?",
+    "choice1": "Tout le monde déteste Chris",
+    "choice2": "La vie de famille",
+    "choice3": "Friends",
+    "choice4": "Ma famille d'abord",
     "answer": 2
   },
   {
-    "question": "Styve est...",
-    "choice1": "Dévéloppeur Web",
-    "choice2": "Dévéloppeur Mobile",
-    "choice3": "Web designer",
-    "choice4": "Un con",
+    "question": "Où est-ce que Styve aimerait voyager?",
+    "choice1": "au Canada",
+    "choice2": "aux Etats Unis",
+    "choice3": "en France",
+    "choice4": "au Japon",
+    "answer": 4
+  },
+  {
+    "question": "Laquelle de ces villes Styve préfère?",
+    "choice1": "Berlin",
+    "choice2": "Paris",
+    "choice3": "Londres",
+    "choice4": "New York",
+    "answer": 1
+  },
+  {
+    "question": "Quel est le numéro préféré de Styve?",
+    "choice1": "100",
+    "choice2": "29",
+    "choice3": "54",
+    "choice4": "07",
+    "answer": 4
+  },
+  {
+    "question": "Combien mésure Styve?",
+    "choice1": "1,67m",
+    "choice2": "1,50m",
+    "choice3": "1,87m",
+    "choice4": "2,00m",
+    "answer": 1
+  },
+  {
+    "question": "Quelle langue Styve aimerait apprendre?",
+    "choice1": "L'Anglais",
+    "choice2": "Le Chinois",
+    "choice3": "L'Allemand",
+    "choice4": "Le Japonais",
+    "answer": 4
+  },
+  {
+    "question": "Quelle était la matière préférée de Styve à l'école?",
+    "choice1": "Le Français",
+    "choice2": "Les Sciences Physiques",
+    "choice3": "Les SVT",
+    "choice4": "Les Mathematiques",
+    "answer": 3
+  },
+  {
+    "question": "Quel est le dernier film que Styve a vu au cinéma?",
+    "choice1": "Avenger End Game",
+    "choice2": "Peter Pan",
+    "choice3": "Ipman 4",
+    "choice4": "Fast & Furious 9",
+    "answer": 1
+  },
+  {
+    "question": "Combien mésure Styve?",
+    "choice1": "1,67m",
+    "choice2": "1,50m",
+    "choice3": "1,87m",
+    "choice4": "2,00m",
     "answer": 1
   }
 ]
