@@ -9,13 +9,13 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 const MAX_HIGH_SCORES = 5;
 
 if (mostRecentScore == 0) {
-    finalScore.innerHTML = `<h2 id="finalScore">Désolé, tu ne connais pas du tout Styve.`;
+    finalScore.innerHTML = `<h2 id="finalScore">Désolé &#128530, tu ne connais pas du tout Styve.`;
 } else if (mostRecentScore == 100) {
-    finalScore.innerHTML = `<h2 id="finalScore">Félicitations, tu connais parfaitement Styve.`;
+    finalScore.innerHTML = `<h2 id="finalScore">Félicitations &#127881, tu connais parfaitement Styve.`;
 } else if (mostRecentScore >= 40) {
-    finalScore.innerHTML = `<h2 id="finalScore">Félicitations, tu connais assez bien Styve.`;
+    finalScore.innerHTML = `<h2 id="finalScore">Félicitations &#127881, tu connais assez bien Styve.`;
 } else {
-    finalScore.innerHTML = `<h2 id="finalScore">Désolé, tu ne connais pas assez Styve.`;
+    finalScore.innerHTML = `<h2 id="finalScore">Désolé &#128529, tu ne connais pas assez Styve.`;
 }
 finalScoreInt.innerHTML = `Score: ${mostRecentScore}%`;
 
@@ -30,7 +30,7 @@ saveHighScore = (e) => {
     const score = {
         score: mostRecentScore,
         name: username.value,
-        date: new Date(),
+        date: new Date().toDateString(),
     };
     highScores.push(score);
     highScores.sort((a, b) => b.score - a.score);

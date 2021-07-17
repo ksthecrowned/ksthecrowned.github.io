@@ -117,7 +117,7 @@
     "choice2": "1,50m",
     "choice3": "1,87m",
     "choice4": "2,00m",
-    "answer": 1
+    "answer": 3
   },
   {
     "question": "Quelle langue Styve aimerait apprendre?",
@@ -149,6 +149,6 @@
     "choice2": "1,50m",
     "choice3": "1,87m",
     "choice4": "2,00m",
-    "answer": 1
+    "answer": 3
   }
 ]
