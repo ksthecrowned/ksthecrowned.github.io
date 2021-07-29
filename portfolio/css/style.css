@@ -39,6 +39,14 @@ body::after {
     background: linear-gradient(135deg, #F6416C 10%, #FF9A9E 50%);
 }
 
+/* Page progress style */
+.progress-bar {
+    height: 4px;
+    background: #F6416C;
+    width: 0%;
+}
+/* -- */
+
 @media (min-width: 600px) {
     header {
         background: rgba(255, 255, 255, .1);
@@ -117,3 +125,21 @@ progress::-webkit-progress-bar {
     background-color: #5f5f5f;
     color: white;
 }
+
+/* Glowing text style */
+.glow {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+

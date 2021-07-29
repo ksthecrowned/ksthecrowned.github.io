@@ -12,6 +12,9 @@
     <title>Kaiser Styve - Portfolio</title>
 </head>
 <body id="up" class="overflow-x-hidden">
+    <div class="w-full bg-gray-50 fixed z-50">
+        <div class="progress-bar shadow-xl" id="myBar"></div>
+    </div>
 
     <!-- Desktop header -->
     <header class="bg mt-8 max-w-6xl sm:w-11/12 block">
@@ -20,6 +23,10 @@
                 <a href="#"><img src="./img/my-logo.png" class="w-12" alt=""></a>
             </div>
             <ul class="flex my-3">
+                <li class="mx-3 my-0">
+                    <a class="font-medium text-gray-700 hover:text-gray-200" 
+                    data-easing="linear" href="#up">Intro</a>
+                </li>
                 <li class="mx-3 my-0">
                     <a class="font-medium text-gray-700 hover:text-gray-200" 
                     data-easing="linear" href="#about">A propos</a>
@@ -38,7 +45,7 @@
                 </li>
             </ul>
             <div class="">
-                <span class="underline font-medium text-gray-700">#ksportfolio</span>
+                <span class="underline font-medium text-gray-700">#ksthecrowned</span>
             </div>
         </nav>
 
@@ -360,10 +367,12 @@
                             </div>
                             <div data-aos="fade-up" class="w-full sm:w-1/3 py-2 sm:px-4">
                                 <div class="flex justify-between font-medium text-gray-600">
-                                    <h2 class="">DART</h2>
+                                    <h2 class="">PHP</h2>
                                     <p class="">
                                         <span class="text-red-600">&star;</span>
-                                        &star; &star; &star; &star;
+                                        <span class="text-red-600">&star;</span>
+                                        <span class="text-red-600">&star;</span>
+                                        &star; &star;
                                     </p><span class="hidden sm:block">|</span>
                                 </div>
                             </div>
@@ -384,7 +393,7 @@
                     </div>
                 </div>
                 <h1 class="w-full mt-6 mb-2 text-2xl font-bold leading-tight text-center text-white">
-                    Front-End
+                    Front-end
                 </h1>
                 <div class="pt-8 pb-6 px-2 mx-3 flex flex-wrap bg-white rounded-lg shadow-lg">
                     <div data-aos="fade-up" class="w-full sm:w-1/2 px-4">
@@ -431,7 +440,7 @@
                     </div>
                 </div>
                 <h1 class="w-full mt-6 mb-2 text-2xl font-bold leading-tight text-center text-white">
-                    Back-End
+                    Back-end
                 </h1>
                 <div class="pt-8 pb-6 px-2 mx-3 flex flex-wrap bg-white rounded-lg shadow-lg">
                     <div data-aos="fade-up" class="w-full sm:w-1/2 px-4">
@@ -457,7 +466,7 @@
                     </div>
                     <div data-aos="fade-up" class="w-full sm:w-1/2 px-4">
                         <div class="flex justify-between">
-                            <h2 class="text-gray-600">FLASK</h2>
+                            <h2 class="text-gray-600">LARAVEL</h2>
                             <span class="text-gray-600">50%</span>
                         </div>
                         <progress class="w-full my-4" value="50" max="100"></progress>
@@ -490,7 +499,7 @@
                     </div>
                     <div data-aos="fade-up" class="w-full sm:w-1/2 px-4">
                         <div class="flex justify-between">
-                            <h2 class="text-gray-600">MYSQL</h2>
+                            <h2 class="text-gray-600">REDIS</h2>
                             <span class="text-gray-600">70%</span>
                         </div>
                         <progress class="w-full my-4" value="70" max="100"></progress>
@@ -667,6 +676,105 @@
                     </div>
                 </div>
                 <div class="flex flex-wrap">
+                    <!-- <div class="w-full sm:w-1/2 px-3">
+                        <div class="django filterDiv p-1 border mx-auto border-3 shadow-lg border-t rounded-lg my-4">
+                            <div class="row">
+                                <div class="column left">
+                                    <span class="dot" style="background:#ED594A;"></span>
+                                    <span class="dot" style="background:#FDD800;"></span>
+                                    <span class="dot" style="background:#5AC05A;"></span>
+                                </div>
+                                <div class="column middle">
+                                    <input type="text" value="../index.html">
+                                </div>
+                                <div class="column right">
+                                    <div style="float:right">
+                                      <span class="bar"></span>
+                                      <span class="bar"></span>
+                                      <span class="bar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full h-64 relative">
+                                <img src="./img/background.jpg" alt="" class="row-2 h-full w-full absolute object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        /* Container for columns and the top "toolbar" */
+                        .row {
+                            padding: 10px;
+                            background: #f1f1f1;
+                            border-top-left-radius: 4px;
+                            border-top-right-radius: 4px;
+                        }
+
+                        .row-2 {
+                            border-bottom-left-radius: 4px;
+                            border-bottom-right-radius: 4px;
+                        }
+                        
+                        /* Create three unequal columns that floats next to each other */
+                        .column {
+                            float: left;
+                        }
+                        
+                        .left {
+                            width: 15%;
+                        }
+                        
+                        .right {
+                            width: 10%;
+                        }
+                        
+                        .middle {
+                            width: 75%;
+                        }
+                        
+                        /* Clear floats after the columns */
+                        .row:after {
+                            content: "";
+                            display: table;
+                            clear: both;
+                        }
+                        
+                        /* Three dots */
+                        .dot {
+                            margin-top: 4px;
+                            height: 15px;
+                            width: 15px;
+                            background-color: #bbb;
+                            border-radius: 50%;
+                            display: inline-block;
+                        }
+                        
+                        /* Style the input field */
+                        input[type=text] {
+                            width: 100%;
+                            border-radius: 3px;
+                            border: none;
+                            background-color: white;
+                            margin-top: -8px;
+                            height: 25px;
+                            color: #666;
+                            padding: 5px;
+                        }
+                        
+                        /* Three bars (hamburger menu) */
+                        .bar {
+                            width: 17px;
+                            height: 3px;
+                            background-color: #aaa;
+                            margin: 3px 0;
+                            display: block;
+                        }
+                        
+                        /* Page content */
+                        .content {
+                            padding: 10px;
+                        }
+  
+                    </style> -->
                     <div class="w-full sm:w-1/2 px-3">
                         <div class="django filterDiv bg-white mx-auto px-2 shadow-lg py-2 border-t rounded-lg my-4">
                             <div class="flex flex-wrap justify-between">
@@ -1001,7 +1109,7 @@
                 </a>
             </li>
         </ul>
-        <div class="text-gray-50 text-sm font-medium">Copyright &copy; #ksportfolio made by Kaiser Styve</div>
+        <div class="text-gray-50 text-sm font-medium">Copyright &copy; #ksthecrowned made by Kaiser Styve</div>
     </footer>
 
     <!-- Scripts -->
