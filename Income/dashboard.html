@@ -4,25 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
+    <link rel="shortcut icon" href="./assets/img/favicon.jpg" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicon.jpg"/>
     <link rel="stylesheet" href="./assets/chart.js" />
     <link rel="stylesheet" href="./assets/css/font-awesome/all.css" />
     <link rel="stylesheet" href="./assets/css/tailwind.css" />
     <link rel="stylesheet" href="./assets/css/compiled-tailwind.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <title>Dashboard</title>
   </head>
   <body class="text-blueGray-700 antialiased">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
+
+      <!-- Mobile nav -->
       <nav class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-50 py-4 px-6">
         <div class="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
           <button class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
                onclick="toggleNavbar('example-collapse-sidebar')">
             <i class="fas fa-bars"></i>
           </button>
-          <a class="md:block text-left md:pb-2 text-purple-600 mr-0 inline-block whitespace-nowrap text-xl md:text-3xl font-mono font-bold p-4 px-0" href="javascript:void(0)">
-            UpTrade
+          <a class="logo md:block text-left mr-0 inline-block whitespace-nowrap text-2xl font-mono font-bold px-0" href="javascript:void(0)">
+            uptrade
           </a>
           <ul class="md:hidden items-center flex flex-wrap list-none">
             <li class="inline-block relative" x-data="{ isOpen: false }">
@@ -30,19 +33,18 @@
                 <div class="items-center flex">
                   <span class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full">
                     <img alt="..." class="w-full rounded-full align-middle border-none shadow-lg"
-                        src="./assets/img/team-1-800x800.jpg"/>
+                        src="./assets/img/user-profile.png"/>
                   </span>
                 </div>
               </button>
-              <div x-show="isOpen" @click.away="isOpen = false" class="absolute w-42 right-0 bg-white text-base z-50 text-left rounded shadow-lg">
-                <a href="#" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                  Action
+              <div x-show="isOpen" @click.away="isOpen = false" class="border absolute py-2 w-42 right-0 bg-white text-base z-50 text-left rounded shadow-lg">
+                <a href="#" class="text-sm py-1 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
+                  Account
                 </a>
-                <a href="#" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                  Another action
+                <a href="#" class="text-sm py-1 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
+                  Password change
                 </a>
-                <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-                <a href="#" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
+                <a href="#" class="text-sm py-1 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
                   Log out
                 </a>
               </div>
@@ -52,8 +54,8 @@
             <div class="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200">
               <div class="flex flex-wrap">
                 <div class="w-6/12">
-                  <a class="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0" href="javascript:void(0)">
-                   UpTrade
+                  <a class="logo md:block text-left md:pb-2 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0" href="javascript:void(0)">
+                   uptrade
                   </a>
                 </div>
                 <div class="w-6/12 flex justify-end">
@@ -69,6 +71,8 @@
                 <input type="text" placeholder="Search" class="border-0 px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"/>
               </div>
             </form>
+
+            <!-- SideBar -->
             <ul class="md:flex-col md:min-w-full flex flex-col list-none">
               <li class="items-center">
                 <a class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block" href="#/dashboard">
@@ -112,6 +116,8 @@
         </div>
       </nav>
       <div class="relative md:ml-64 bg-blueGray-50">
+
+        <!-- Desktop nav -->
         <nav class="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4">
           <div class="w-full mx-aut0 items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4">
             <form class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3">
@@ -127,31 +133,39 @@
                 <div class="items-center flex">
                   <span class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full">
                     <img alt="..." class="w-full rounded-full align-middle border-none shadow-lg"
-                      src="./assets/img/team-1-800x800.jpg"/>
+                      src="./assets/img/user-profile.png"/>
                   </span>
                 </div>
               </button>
-              <div x-show="isOpen" @click.away="isOpen = false" class="absolute right-0 top-0 mr-5 mt-16 bg-white text-base z-50 py-2 list-none text-left rounded shadow-lg" style="min-width: 12rem;" id="user-dropdown">
-                <a href="#" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                Action
+              <div x-show="isOpen" @click.away="isOpen = false" class="absolute right-0 top-0 py-2 mr-5 mt-16 bg-white text-base z-50 py-2 list-none text-left rounded shadow-lg" style="min-width: 12rem;" id="user-dropdown">
+                <a href="#" class="text-sm py-1 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
+                    Account
                 </a>
-                <a href="#" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                  Another action
+                <a href="#" class="text-sm py-1 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
+                    Password change
                 </a>
-                <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-                <a href="#" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                  Log out
+                <a href="#" class="text-sm py-1 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
+                    Log out
                 </a>
               </div>
             </ul>
           </div>
         </nav>
-        <!-- Header -->
+
+        <!-- Main content -->
         <div class="relative pb-32 pt-6">
-          <div class="px-4 md:px-10 mx-auto w-full">
+          <div class="md:px-4 mx-auto w-full">
             <div>
               <h1 class="text-3xl pb-6 pl-4">Dashboard</h1>
+              <hr>
               <!-- Card stats -->
+              <div class="flex flex-col px-4 pb-6 mt-4">
+                <label for="email" class="font-semibold text-gray-500 mb-1">Your affiliate url:</label>
+                <div class="w-full flex space-x-2 sm:space-x-4">
+                  <input type="text" id="link" value="http://127.0.0.1:5500/dashboard.html/user/3174HVGZ789B" class="w-full border-0 px-4 py-3 text-blueGray-600 bg-white rounded text-sm shadow outline-none focus:outline-none" />
+                  <button class="bg-purple-600 px-4 border-0 text-white rounded text-sm shadow outline-none focus:outline-none">copy</button>
+                </div>
+              </div>
               <div class="flex flex-wrap">
                 <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
                   <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
@@ -273,7 +287,7 @@
             </div>
           </div>
         </div>
-        <div class="px-4 md:px-10 mx-auto w-full -m-24">
+        <div class="md:px-4 mx-auto w-full -m-24">
           <div class="flex flex-wrap">
             <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
               <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-800">

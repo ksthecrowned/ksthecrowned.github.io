@@ -1,0 +1,28 @@
+<a href="#" onclick="setLanguage('en')">English</a>
+<a href="#" onclick="setLanguage('fr')">French</a>
+
+<div class="" id="div1"></div>
+
+
+<script src="./js/jquery/jquery.js"></script>
+<script>
+    var language;
+    function getLanguage() {
+        (localStorage.getItem('language') == null) ? setLanguage('en') :false;
+        $.ajax({
+            uel: '/language/' + localStorage.getItem('language') + '.json',
+            dataType: 'json', async: false, dataType: 'json',
+            success: function (lang) { language = lang }
+        });
+    }
+
+    function setLanguage(lang) {
+        localStorage.setItem('language', lang);
+    }
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('#div1').text(language.data);
+    })
+</script>
