@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+body {
+    background: #EDF2F7;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+header {
+    z-index: 99!important;
+    box-shadow: 0 4px 2px -2px rgb(0, 0, 0, .16);
+}
+
+header .dropdown {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+aside {
+    z-index: 100!important;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+
+    /* only left shadow */
+    /* box-shadow: 12px 0 15px -4px rgba(0, 0, 0, .16) */
+}
+
+.active, .sidebar-btn:hover {
+    background: #37517E!important;
+    color: #fff!important;;
+}
+
+.active, .sidebar-btn:hover > svg {
+    color: #fff!important;;
+}
+
+.active, .sidebar-btn:hover > span {
+    color: #fff!important;;
+}
+
+.active, .sidebar-btn:hover > span svg {
+    color: #fff!important;;
+}
+
+.separator {
+    opacity: .1;
+}
+
+.logo {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: bold;
+    color: #37517E;
+}
+
+.links-title {
+    color: gray;
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.khazad-btn {
+    background: #37517E!important;
+}
+
+.closeBtn {
+    position: relative;
+    right: -10px;
+    top: -20px;
+}
+
+.font-medium {
+    font-weight: 500;
+}
