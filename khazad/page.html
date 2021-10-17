@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="modal_avice_exit" style="width: 100vw; min-height: 100vh; background-color: rgba(0, 0, 0, 0.61); z-index: 1000; position: fixed; text-align: center; color: rgb(0, 0, 0); flex-direction: column; place-content: center; display: flex; top: 0px;">
+        <style>
+            * {
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            #antiexitModal {
+                width: 90%;
+            }
+            @media (min-width: 768px) {
+                #antiexitModal {
+                    width: 350px;
+                }
+            }
+            @media (min-width: 992px) {
+                #antiexitModal {
+                    width: 350px;
+                }
+            }
+            @media (min-width: 1200px) {
+                #antiexitModal {
+                    width: 350px;
+                }
+            }
+              
+            .option-input {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                -o-appearance: none;
+                appearance: none;
+                height: 20px;
+                width: 20px;
+                background: #cbd1d8;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+                outline: none;
+                position: relative;
+                top: -1px;
+            }
+            .option-input:hover {
+                background: #9faab7;
+            }
+            .option-input:checked {
+                background: #ff6600;
+            }
+            .option-input:checked::before {
+                height: 20px;
+                width: 20px;
+                position: absolute;
+                content: '✔';
+                font-size: 13.66667px;
+                text-align: center;
+            }
+            .option-input:checked::after {
+                background: #ff6600;
+                content: '';
+                display: block;
+                z-index: 100;
+            }
+            .option-input.radio {
+                border-radius: 50%;
+            }
+            .option-input.radio::after {
+                border-radius: 50%;
+            }
+            .modal_content {
+                background: #fff;
+                height: auto;
+                margin: auto;
+                border-radius: 10px;
+                border: 1px solid #ff6600;
+                padding: 40px 20px;
+            }
+            .modal_head {
+                color: #333;
+                margin-bottom: 40px;
+                text-align: start;
+                padding: 0 10px;
+            }
+            .input-radio-group {
+                display: flex;
+                align-items: center;
+                padding:5px 6px;
+                margin:5px;
+            }
+            .input-text-group {
+                display: flex;
+                flex-direction: column;
+                padding:5px 10px;
+                margin-top: 15px;
+            }
+            .input-text-group label {
+                text-align: start;
+                margin: 0 0 0 5px;
+                color: #333;
+            }
+            .input-text-group input[type=text] {
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 102, 0, .5);;
+                margin-top: 5px;
+            }
+            .input-text-group input[type=text]:focus {
+                outline: none;
+                border: 1px solid rgba(255, 102, 0);
+
+                transition: border .2s ease-in-out;
+            }
+            .text-white {
+                color: #fff;
+            }
+            .input-radio-group label {
+                margin-top: 2px;
+                padding-right: 10px;
+                color: #333;
+            }
+            .active {
+                border-radius:20px;
+                background: rgba(255, 102, 0,.16);
+                border: 1px solid #ff6600;
+            }
+            .button-group {
+                display: flex;
+                justify-content: space-between;
+                padding: 15px 10px;
+            }
+            .modal-btn {
+                background: #ff6600;
+                width: 150px;
+                height: 45px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 11px;
+                text-transform: uppercase;
+                font-weight: 500;
+                color: #fff;
+                border: none;
+                border-radius: 45px;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+                outline: none;
+            }
+            .modal-btn-2 {
+                width: 150px;
+                height: 45px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 11px;
+                text-transform: uppercase;
+                font-weight: 500;
+                color: #000;
+                border: none;
+                border-radius: 45px;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+                outline: none;
+            }
+        </style>
+        <div id="antiexitModal" class="modal_content">
+            <h2 class="modal_head">Vous nous quittez :( <br /> svp, dites-nous pourquoi :)</h2>
+            <div>
+                <div class="input-radio-group active">
+                    <input type="hidden" name="id_anti_exit" id="id_anti_exit" value="1">
+                    <input type="radio" class="option-input radio" name="reponse" id="reponse_1" value="Je n'ai pas trouvé ce que je cherchais" checked />
+                    <label for="reponse_1">&nbsp;Je n'ai pas trouvé ce que je cherchais</label>
+                </div>
+                <div class="input-radio-group">
+                    <input type="radio" class="option-input radio" name="reponse" id="reponse_2" value="Je me balade simplement" />
+                    <label for="reponse_2">&nbsp;Je me balade simplement</label>
+                </div>
+                <div class="input-radio-group">
+                    <input type="radio" class="option-input radio" name="reponse" id="reponse_3" value="J'ai trouve ce que je cherchais, merci" />
+                    <label for="reponse_3">&nbsp;J'ai trouve ce que je cherchais, merci</label>
+                </div>
+                <div class="input-text-group">
+                    <label for="avis">Nous faire part de vos remarques à ce sujet</label>
+                    <input placeholder="Votre avis" type="text" name="avis" id="avis">
+                </div>
+            </div>
+            <div class="button-group">
+                <button id="send_avis" type="submit" class="modal-btn">Envoyer mon avis</button>
+                <button id="close_avice" class="modal-btn-2">Quitter</button>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $("input[type=radio][name=reponse]").change(function() {
+                $("input[name=reponse]").parent().removeClass('active');
+        
+                $("input[name=reponse]:checked").parent().addClass('active');
+            })
+        </script>
+    </div>
+</body>
+</html>
