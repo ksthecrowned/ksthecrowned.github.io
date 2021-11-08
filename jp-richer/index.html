@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <!-- Custom css file -->
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body x-data="{ showModal : false }" class="flex flex-col w-full h-full overflow-x-hidden bg-white">
+    <!-- Header and navbar -->
+    <header class="w-full h-32 z-50 bg-black bg-opacity-75 absolute text-white flex justify-between px-12">
+        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 md:items-center md:px-6 lg:px-8">
+            <div class="w-full h-20 flex justify-between pt-2">
+                <div>
+                    <img src="./images/logo.png" alt="" class="h-16">
+                </div>
+                <div class="flex uppercase space-x-5 font-medium">
+                    <a class="py-2 text-sm md:mt-0 hover:text-gray-400 focus:text-gray-400" href="#">Contact</a>
+                    <a class="py-2 text-sm md:mt-0 hover:text-gray-400 focus:text-gray-400" href="call:514 793-8989">514 793-8989</a>
+                    <a class="py-2 text-sm md:mt-0 hover:text-gray-400 focus:text-gray-400" href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a class="py-2 text-sm md:mt-0 hover:text-gray-400 focus:text-gray-400" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="py-2 text-sm md:mt-0 hover:text-gray-400 focus:text-gray-400" href="#">EN</a>
+                </div>
+            </div>
+            <div class="">
+                <div class="md:hidden p-4 flex flex-row items-center justify-between">
+                    <button class="rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                            <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden md:flex md:justify-end md:flex-row uppercase">
+                    <a class="pr-3 py-2 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400" href="#">A propos</a>
+                    <a class="px-3 py-2 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400" href="#">Proriétés</a>
+                    <a class="px-3 py-2 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400" href="#">Accompagnement</a>
+                    <a class="px-3 py-2 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400" href="#">Secteur</a>
+                    <a class="px-3 py-2 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400" href="#">Blog</a>
+                    <a class="px-3 py-2 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400" href="#">Calculateurs</a>
+                    <a class="px-3 py-2 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400" href="#">Marketing</a>
+                    <a class="m-1 px-2 py-1 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400 border-2" href="#">Alerte immobilière 
+                        <span class="btn-arrow">&rightarrow;</span>
+                    </a>
+                    <!-- <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" class="flex flex-row items-center w-full px-3 py-2 mt-2 text-sm font-medium text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline">
+                            <span class="uppercase">Dropdown</span>
+                            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline  w-4 h-4 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                            <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                                <a class="block px-3 py-2 mt-2 text-sm font-medium bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline" href="#">Link #1</a>
+                                <a class="block px-3 py-2 mt-2 text-sm font-medium bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline" href="#">Link #2</a>
+                                <a class="block px-3 py-2 mt-2 text-sm font-medium bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 focus:outline-none focus:shadow-outline" href="#">Link #3</a>
+                            </div>
+                        </div>
+                    </div>  -->
+                </nav>
+            </div>
+        </div>
+        <div class="w-44 flex justify-center relative">
+            <svg class="absolute bottom-0 opacity-50" xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 120 100">
+                <path id="Subtraction_1" data-name="Subtraction 1" d="M120,100H95.477V50.94L59.651,27.947,24.724,50.941V100H0V38.971L59.651,0,120,38.971V100Z" fill="#fff"/>
+            </svg>                                        
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="w-full h-screen relative" style="background: url('./images/hero.png');background-repeat: no-repeat;background-size:cover;">
+        <div class="relative top-50">
+            <div class="flex h-60 w-1/2 flex justify-between space-x-12 -mt-16">
+                <div class="h-full w-6 bg-black"></div>
+                <div class="flex flex-col justify-between pb-2">
+                    <h2 class="text-6xl">Toujours présent pour vous</h2>
+                    <p class="font-medium">Lorem ipsum dolor sit amet, adipisicing elit. Numquam sequi officiis totam, omnis cum odit adipisci fugit? Ipsa in atque porro alias debitis quam!</p>
+                    <div class="">
+                        <a href="#" class="px-2 py-1 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400 border-2 border-gray-900">
+                            Mes propriétés
+                            <span>&rightarrow;</span>
+                        </a>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evaluation button -->
+    <button @click="showModal = !showModal" class="fixed z-40 top-50 -right-16 w-44 bg-black border-2 px-3 py-1 text-white text-sm transform -rotate-90">
+        Evaluation gratuite <span>&rightarrow;</span>
+    </button>
+
+    <!-- Evaluation section -->
+    <section x-show="showModal" @click.away="showModal = !showModal" class="fixed w-1/2 right-0 h-screen bg-black z-50 border-l-4 border-white">
+        <div class="p-12 pr-20 relative">
+            <div class="absolute right-20">
+                <button @click="showModal = !showModal" class="rounded-full h-8 w-8 border text-white flex items-center justify-center text-center focus:outline-none;">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <h2 class="font-medium text-white text-2xl mt-3">Lorem ipsum dolor sit amet consectetur.</h2>
+            <p class="text-white text-sm my-3">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui hic tenetur magnam at quidem, quisquam aliquid nemo voluptates.
+            </p>
+            <form action="" method="post" class="text-sm">
+                <div class="form-group d-flex space-x-4 mt-3">
+                    <input type="text" class="form-control" name="" id="" placeholder="Prénom">
+                    <input type="text" class="form-control" name="" id="" placeholder="Nom">
+                </div>
+                <div class="form-group d-flex space-x-4 mt-3">
+                    <input type="number" class="form-control" name="" id="" placeholder="Téléphone">
+                    <input type="email" class="form-control" name="" id="" placeholder="Courriel">
+                </div>
+                <div class="form-group d-flex space-x-4 mt-3">
+                    <input type="number" class="form-control" name="" id="" placeholder="Téléphone">
+                    <input type="email" class="form-control" name="" id="" placeholder="Courriel">
+                </div>
+                <div class="form-group d-flex space-x-4 mt-3">
+                    <input type="number" class="form-control" name="" id="" placeholder="Téléphone">
+                    <input type="email" class="form-control" name="" id="" placeholder="Courriel">
+                </div>
+                <div class="form-group mt-3">
+                    <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                </div>
+                <div class="form-group mt-3">
+                    <button class="text-white px-2 py-1 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400 border-2">
+                        Envoyer
+                        <span>&rightarrow;</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Messenger button -->
+    <div class="fixed z-40 bottom-4 right-4 bg-blue-500 rounded-full">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Messenger_logo_2018.svg/2048px-Facebook_Messenger_logo_2018.svg.png" alt="" class="h-10 w-10"> 
+    </div>
+
+    <section class="w-full relative flex flex-col items-center bg-white">
+        <div class="w-full flex justify-center space-x-6 py-20 bg-black">
+            <div class="w-96 h-48 border-3 relative cursor-pointer image-grayscale">
+                <img class="h-full w-full object-cover absolute" src="./images/Groupe 65.png" alt="">
+                <div class="absolute h-full w-full bg-black bg-opacity-50"></div>
+                <div class="w-full h-full absolute flex flex-col justify-center items-center">
+                    <h2 class="text-5xl uppercase text-white font-medium">Vendre</h2>
+                    <p class="text-white text-3xl">une propriété</p>
+                    <span class="text-white text-4xl">&downarrow;</span>
+                </div>
+            </div>
+            <div class="w-96 h-48 border-3 relative cursor-pointer image-grayscale">
+                <img class="h-full w-full object-cover absolute" src="./images/22.png" alt="">
+                <div class="absolute h-full w-full bg-black bg-opacity-50"></div>
+                <div class="w-full h-full absolute flex flex-col justify-center items-center">
+                    <h2 class="text-5xl uppercase text-white font-medium">Acheter</h2>
+                    <p class="text-white text-3xl">une propriété</p>
+                    <span class="text-white text-4xl">&downarrow;</span>
+                </div>
+            </div>
+            <div class="w-96 h-48 border-3 relative cursor-pointer image-grayscale">
+                <img class="h-full w-full object-cover absolute" src="./images/1.png" alt="">
+                <div class="absolute h-full w-full bg-black bg-opacity-50"></div>
+                <div class="w-full h-full absolute flex flex-col justify-center items-center">
+                    <h2 class="text-5xl uppercase text-white font-medium">Alerte</h2>
+                    <p class="text-white text-3xl">immobilière</p>
+                    <span class="text-white text-4xl">&downarrow;</span>
+                </div>
+            </div>
+        </div>
+        <div class="w-full px-3">
+            <div class="w-full h-full bg-black text-center py-4">
+                <div class="max-w-xl mx-auto">
+                    <h2 class="text-white text-5xl">A propos de Jean-Philipe</h2>
+                    <div class="w-20 mx-auto h-0.5 bg-white my-4"></div>
+                    <p class="text-white text-sm font-thin">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nam blanditiis excepturi perferendis illo facere molestias aperiam sunt deleniti dolorem corrupti ad explicabo mollitia amet aut assumenda eius maxime possimus.
+                        Cum eaque pariatur, quo alias mollitia asperiores. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-black p-12 relative">
+            <div class="w-44 flex justify-center">
+                <svg class="absolute bottom-0 opacity-50" xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 120 100">
+                    <use href="./images/image3.png" style="--color_fill: #000;"></use>
+                    <path id="Subtraction_1" data-name="Subtraction 1" d="M120,100H95.477V50.94L59.651,27.947,24.724,50.941V100H0V38.971L59.651,0,120,38.971V100Z" fill="#fff"/>
+                </svg>                                        
+            </div>
+            <div class="w-full h-full mt-4 mb-8">
+                <div class="w-full flex justify-center items-center text-white text-5xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="20.59" height="150" viewBox="0 0 20.59 150">
+                        <path id="arrow-down" d="M26.061,93.7c-.313-.483.466-.788.022-.788s-1.535-.483-1.848,0l-6,8.427L17.66-37.777c0-1.41-.113-2.962-1.032-2.962s-2.3,1.552-2.3,2.962l.483,139.117L8.829,92.913a1.306,1.306,0,0,0-2.365,0,2.3,2.3,0,0,0,.022,2.839l8.326,12.768a1.779,1.779,0,0,0,.55.536,1.08,1.08,0,0,0,1.266,0,1.779,1.779,0,0,0,.55-.536l8.906-11.981a3.356,3.356,0,0,0,.493-1.813c0-.681-.2-.546-.514-1.025Z" transform="translate(-5.985 40.739)"/>
+                    </svg>                                                                                     
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative w-full h-screen bg-cover filter grayscale" style="background: url(./images/image3.png);">
+        <div class="absolute h-full w-full bg-black bg-opacity-50"></div>
+        <div class="absolute w-full h-full">
+            <div class="max-w-xl mx-auto my-16 text-center">
+                <h2 class="text-white text-5xl">Mes propriétés</h2>
+                <div class="w-20 mx-auto h-0.5 bg-white my-4"></div>
+                <p class="text-white text-sm font-thin">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nam blanditiis excepturi perferendis illo facere molestias aperiam sunt deleniti dolorem corrupti ad explicabo mollitia amet aut assumenda eius maxime possimus.
+                    Cum eaque pariatur, quo alias mollitia asperiores. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="-mt-80">
+        <div class="w-full flex flex-wrap justify-center">
+            <div class="w-92 relative m-2">
+                <div class="w-full h-60 relative">
+                    <div class="absolute w-full h-60 cursor-pointer bg-trnasparent hover:bg-black hover:bg-opacity-50 transition-colors duration-500">
+                        <div class="w-full h-full flex justify-center items-center text-transparent hover:text-white text-3xl transiton-all duration-500">&plus;</div>
+                    </div>
+                    <img src="https://media.istockphoto.com/photos/view-of-white-house-with-garage-from-the-front-picture-id175537632?k=20&m=175537632&s=612x612&w=0&h=Xjz3AoL4RdNR9Jj8LDepqkupq6AXagtYO9wi6g8phhw=" alt="" class="h-full w-full">
+                </div>
+                <div class="p-4 bg-gray-100">
+                    <h2 class="font-semibold text-lg my-2">Maison à étages</h2>
+                    <h6 class="font-semibold text-gray-500 text-sm my-1">Mirabel</h6>
+                    <h6 class="font-semibold text-sm my-1">6610 Rue M.-J,-Drapeau</h6>
+                    <div class="font-semibold text-xl my-4">389 000 $</div>
+                    <div class="flex justify-between">
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-home"></i>
+                            <span>7 pièces</span> 
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-bed"></i>
+                            <span>2 cac</span>
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-bath"></i>
+                            <span>1+1 sbd</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-92 relative m-2">
+                <div class="w-full h-60 relative">
+                    <div class="absolute w-full h-60 cursor-pointer bg-trnasparent hover:bg-black hover:bg-opacity-50 transition-colors duration-500">
+                        <div class="w-full h-full flex justify-center items-center text-transparent hover:text-white text-3xl transiton-all duration-500">&plus;</div>
+                    </div>
+                    <img src="https://media.istockphoto.com/photos/view-of-white-house-with-garage-from-the-front-picture-id175537632?k=20&m=175537632&s=612x612&w=0&h=Xjz3AoL4RdNR9Jj8LDepqkupq6AXagtYO9wi6g8phhw=" alt="" class="h-full w-full">
+                </div>
+                <div class="p-4 bg-gray-100">
+                    <h2 class="font-semibold text-lg my-2">Maison à étages</h2>
+                    <h6 class="font-semibold text-gray-500 text-sm my-1">Mirabel</h6>
+                    <h6 class="font-semibold text-sm my-1">6610 Rue M.-J,-Drapeau</h6>
+                    <div class="font-semibold text-xl my-4">389 000 $</div>
+                    <div class="flex justify-between text-sm my-1">
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-home"></i>
+                            <span>7 pièces</span> 
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-bed"></i>
+                            <span>2 cac</span>
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-bath"></i>
+                            <span>1+1 sbd</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-92 relative m-2">
+                <div class="w-full h-60 relative">
+                    <div class="absolute w-full h-60 cursor-pointer bg-trnasparent hover:bg-black hover:bg-opacity-50 transition-colors duration-500">
+                        <div class="w-full h-full flex justify-center items-center text-transparent hover:text-white text-3xl transiton-all duration-500">&plus;</div>
+                    </div>
+                    <img src="https://media.istockphoto.com/photos/view-of-white-house-with-garage-from-the-front-picture-id175537632?k=20&m=175537632&s=612x612&w=0&h=Xjz3AoL4RdNR9Jj8LDepqkupq6AXagtYO9wi6g8phhw=" alt="" class="h-full w-full">
+                </div>
+                <div class="p-4 bg-gray-100">
+                    <h2 class="font-semibold text-lg my-2">Maison à étages</h2>
+                    <h6 class="font-semibold text-gray-500 text-sm my-1">Mirabel</h6>
+                    <h6 class="font-semibold text-sm my-1">6610 Rue M.-J,-Drapeau</h6>
+                    <div class="font-semibold text-xl my-4">389 000 $</div>
+                    <div class="flex justify-between text-sm my-1">
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-home"></i>
+                            <span>7 pièces</span> 
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-bed"></i>
+                            <span>2 cac</span>
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-bath"></i>
+                            <span>1+1 sbd</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-92 relative m-2">
+                <div class="w-full h-60 relative">
+                    <div class="absolute w-full h-60 cursor-pointer bg-trnasparent hover:bg-black hover:bg-opacity-50 transition-colors duration-500">
+                        <div class="w-full h-full flex justify-center items-center text-transparent hover:text-white text-3xl transiton-all duration-500">&plus;</div>
+                    </div>
+                    <img src="https://media.istockphoto.com/photos/view-of-white-house-with-garage-from-the-front-picture-id175537632?k=20&m=175537632&s=612x612&w=0&h=Xjz3AoL4RdNR9Jj8LDepqkupq6AXagtYO9wi6g8phhw=" alt="" class="h-full w-full">
+                </div>
+                <div class="p-4 bg-gray-100">
+                    <h2 class="font-semibold text-lg my-2">Maison à étages</h2>
+                    <h6 class="dont-semibold text-gray-500 text-sm my-1">Mirabel</h6>
+                    <h6>6610 Rue M.-J,-Drapeau</h6>
+                    <div class="font-semibold text-xl my-4">389 000 $</div>
+                    <div class="flex justify-between text-sm my-1">
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-home"></i>
+                            <span>7 pièces</span> 
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-bed"></i>
+                            <span>2 cac</span>
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-bath"></i>
+                            <span>1+1 sbd</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-92 relative m-2">
+                <div class="w-full h-60 relative">
+                    <div class="absolute w-full h-60 cursor-pointer bg-trnasparent hover:bg-black hover:bg-opacity-50 transition-colors duration-500">
+                        <div class="w-full h-full flex justify-center items-center text-transparent hover:text-white text-3xl transiton-all duration-500">&plus;</div>
+                    </div>
+                    <img src="https://media.istockphoto.com/photos/view-of-white-house-with-garage-from-the-front-picture-id175537632?k=20&m=175537632&s=612x612&w=0&h=Xjz3AoL4RdNR9Jj8LDepqkupq6AXagtYO9wi6g8phhw=" alt="" class="h-full w-full">
+                </div>
+                <div class="p-4 bg-gray-100">
+                    <h2 class="font-semibold text-lg my-2">Maison à étages</h2>
+                    <h6 class="dont-semibold text-gray-500 text-sm my-1">Mirabel</h6>
+                    <h6>6610 Rue M.-J,-Drapeau</h6>
+                    <div class="font-semibold text-xl my-4">389 000 $</div>
+                    <div class="flex justify-between text-sm my-1">
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-home"></i>
+                            <span>7 pièces</span> 
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-bed"></i>
+                            <span>2 cac</span>
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-bath"></i>
+                            <span>1+1 sbd</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-92 relative m-2">
+                <div class="w-full h-60 relative">
+                    <div class="absolute w-full h-60 cursor-pointer bg-trnasparent hover:bg-black hover:bg-opacity-50 transition-colors duration-500">
+                        <div class="w-full h-full flex justify-center items-center text-transparent hover:text-white text-3xl transiton-all duration-500">&plus;</div>
+                    </div>
+                    <img src="https://media.istockphoto.com/photos/view-of-white-house-with-garage-from-the-front-picture-id175537632?k=20&m=175537632&s=612x612&w=0&h=Xjz3AoL4RdNR9Jj8LDepqkupq6AXagtYO9wi6g8phhw=" alt="" class="h-full w-full">
+                </div>
+                <div class="p-4 bg-gray-100">
+                    <h2 class="font-semibold text-lg my-2">Maison à étages</h2>
+                    <h6 class="dont-semibold text-gray-500 text-sm my-1">Mirabel</h6>
+                    <h6>6610 Rue M.-J,-Drapeau</h6>
+                    <div class="font-semibold text-xl my-4">389 000 $</div>
+                    <div class="flex justify-between text-sm my-1">
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-home"></i>
+                            <span>7 pièces</span> 
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-bed"></i>
+                            <span>2 cac</span>
+                        </span>
+                        <span class="flex space-x-2 items-center">
+                            <i class="fa fa-bath"></i>
+                            <span>1+1 sbd</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full text-center my-16">
+            <a href="#" class="px-2 py-1 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400 border-2 border-gray-900">
+                Voir toutes mes propriétés
+                <span>&rightarrow;</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="h-screen w-full relative" style="background: url(./images/Groupe\ 108.png);background-size:cover;">
+        <div class="absolute w-full h-full bg-black bg-opacity-25"></div>
+        <div class="absolute h-full w-full flex flex-col justify-center items-center mt-12">
+            <h2 class="text-white text-5xl">Extrait vidéo en background</h2>
+            <div class="w-full text-center my-8 text-white">
+                <a href="#" class="px-2 py-1 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400 border-2 border-white">
+                    Voir toutes les vidéos
+                    <span>&rightarrow;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full">
+        <div class="max-w-4xl mx-auto bg-white relative -mt-28 flex px-6 py-12">
+            <div class="text-center w-1/2">
+                <h2 class="text-gray-800 text-2xl font-medium">Témoignages</h2>
+                <div class="w-20 mx-auto h-0.5 bg-gray-800 my-2"></div>
+                <div class="text-sm">
+                    <div class="flex space-x-2 justify-center items-center mt-10">
+                        <i class="fa fa-star text-gray-400"></i>
+                        <i class="fa fa-star text-gray-400"></i>
+                        <i class="fa fa-star text-gray-400"></i>
+                        <i class="fa fa-star text-gray-400"></i>
+                        <i class="fa fa-star text-gray-400"></i>
+                    </div>
+                    <h2 class="text-gray-800 text-lg font-medium my-3">Emilie Roy</h2>
+                    <p class="text-sm mx-12">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam saepe ipsam aspernatur vitae laborum laudantium placeat, pariatur harum deleniti! Nemo porro itaque eveniet quaerat. Explicabo laboriosam nulla ad ullam vero.
+                    </p>
+                </div>
+                <div class="w-full text-center my-6">
+                    <a href="#" class="px-2 py-1 text-xl font-medium">
+                       <span>&leftarrow;</span>
+                    </a>
+                    <a href="#" class="px-2 py-1 text-xl font-medium">
+                        <span>&rightarrow;</span>
+                    </a>
+                </div>
+                <div class="w-full text-center my-3">
+                    <a href="#" class="px-2 py-1 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400 border-2 border-gray-900">
+                        Ecrire un métoignage
+                        <span>&rightarrow;</span>
+                    </a>
+                </div>
+                <div class="w-full text-center my-3">
+                    <a href="#" class="px-2 py-1 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400">
+                        Voir tous les témoignages
+                        <span>&rightarrow;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="border-l-2 border-gray-600"></div>
+            <div class="text-center w-1/2">
+                <h2 class="text-gray-800 text-2xl font-medium">Avis sur Google</h2>
+                <div class="w-20 mx-auto h-0.5 bg-gray-800 my-2"></div>
+                <div class="mx-12 my-8">
+                    <div class="flex justify-between">
+                        <div class="flex space-x-2">
+                            <img alt="" class="w-16 h-16 rounded-full object-cover" src="https://compass-ssl.microsoft.com/assets/fe/5b/fe5b766b-2852-4866-8dcb-fc93763fad6e.png?n=FamilyHeroAnim2_poster_trimmed.png">
+                            <div class="text-left flex flex-col justify-between">
+                                <h2 class="text-lg font-medium">Bernard Cyr</h2>
+                                <div class="flex space-x-2 justify-center items-center text-xs">
+                                    <i class="fa fa-star text-gray-400"></i>
+                                    <i class="fa fa-star text-gray-400"></i>
+                                    <i class="fa fa-star text-gray-400"></i>
+                                    <i class="fa fa-star text-gray-400"></i>
+                                    <i class="fa fa-star text-gray-400"></i>
+                                </div>
+                                <div class="text-xs text-gray-600">Jun 4, 2021</div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <svg class="w-6 h-6 text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24">
+                                <path d="M22.60229,10.00391a1.00005,1.00005,0,0,0-.98388-.82227H12.2a.99974.99974,0,0,0-1,1V14.0498a.99974.99974,0,0,0,1,1h3.9624a3.65162,3.65162,0,0,1-1.13183,1.1875A5.0604,5.0604,0,0,1,12.2,17.02246a4.93525,4.93525,0,0,1-4.64624-3.4378L7.55347,13.583a4.90382,4.90382,0,0,1,0-3.167l.00024-.00165A4.9356,4.9356,0,0,1,12.2,6.97754,4.37756,4.37756,0,0,1,15.3313,8.19531a1.00053,1.00053,0,0,0,1.39844-.01562L19.5979,5.31152a.99918.99918,0,0,0-.02539-1.43847A10.62342,10.62342,0,0,0,12.2,1,10.949,10.949,0,0,0,2.37134,7.05878l-.00147.00177A10.92175,10.92175,0,0,0,1.2,12a11.07862,11.07862,0,0,0,1.16992,4.93945l.00147.00177A10.949,10.949,0,0,0,12.2,23a10.5255,10.5255,0,0,0,7.29468-2.687l.00073-.00049.00079-.00085.00019-.00013.00006-.00012a10.78575,10.78575,0,0,0,3.30365-8.08386A12.51533,12.51533,0,0,0,22.60229,10.00391ZM12.2,3a8.68219,8.68219,0,0,1,5.2085,1.67285L15.95483,6.126A6.46322,6.46322,0,0,0,12.2,4.97754,6.88648,6.88648,0,0,0,6.21069,8.52832L5.14148,7.69958l-.585-.45367A8.95257,8.95257,0,0,1,12.2,3ZM3.67944,14.90332a9.02957,9.02957,0,0,1,0-5.80664l1.78223,1.38184a6.85381,6.85381,0,0,0,0,3.042ZM12.2,21A8.9528,8.9528,0,0,1,4.5564,16.75391l.37841-.29352,1.27588-.98969A6.88482,6.88482,0,0,0,12.2,19.02246a7.27662,7.27662,0,0,0,3.30573-.75079L17.19739,19.585A8.88989,8.88989,0,0,1,12.2,21Zm6.52588-2.76074-.183-.142L17.16553,17.028a5.60626,5.60626,0,0,0,1.39966-2.79553.9998.9998,0,0,0-.9834-1.18262H13.2V11.18164h7.54883c.03418.3457.05127.69531.05127,1.0459A9.05156,9.05156,0,0,1,18.72583,18.23926Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-sm text-left mt-4">
+                        Nous avons choisis la meilleure pour vendre notre condo. C'est 5*+. Christie est dédiée et travaille pour son client. Bravo et merci.    
+                    </p>
+                </div>
+                <div class="w-full text-center my-6">
+                    <a href="#" class="px-2 py-1 text-xl font-medium">
+                       <span>&leftarrow;</span>
+                    </a>
+                    <a href="#" class="px-2 py-1 text-xl font-medium">
+                        <span>&rightarrow;</span>
+                    </a>
+                </div>
+                <div class="w-full text-center my-3">
+                    <a href="#" class="px-2 py-1 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400 border-2 border-gray-900">
+                        Ecrire un métoignage
+                        <span>&rightarrow;</span>
+                    </a>
+                </div>
+                <div class="w-full text-center my-3">
+                    <a href="#" class="px-2 py-1 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400">
+                        Voir tous les témoignages
+                        <span>&rightarrow;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-16 flex justify-between">
+        <div class="flex h-72 w-1/3 flex justify-between space-x-12">
+            <div class="h-full w-10 bg-black"></div>
+            <div class="flex flex-col justify-between pb-2">
+                <h2 class="text-5xl">Actualité immobilière</h2>
+                <div class="w-20 h-0.5 bg-gray-800 my-2"></div>
+                <p class="font-medium">Lorem ipsum dolor sit amet, adipisicing elit. Numquam sequi officiis totam, omnis cum odit adipisci fugit?</p>
+                <div class="">
+                    <a href="#" class="px-2 py-1 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400 border-2 border-gray-800">
+                        Mes propriétés
+                        <span>&rightarrow;</span>
+                    </a>
+                </div>    
+            </div>
+        </div>
+        <div class="">
+            <div class="flex w-full">
+                <div class="w-64 mx-2">
+                    <img class="w-full h-44 object-cover" alt="" src="https://img-19.ccm2.net/cI8qqj-finfDcmx6jMK6Vr-krEw=/1500x/smart/b829396acc244fd484c5ddcdcb2b08f3/ccmcms-commentcamarche/20494859.jpg">
+                    <div class="w-full p-3 bg-gray-100">
+                        <h2 class="font-medium">Tout sur la taxe de Bienvenue lors de l'achat d'une propriété</h2>
+                        <p class="text-sm my-3">
+                            Presque tous les propriétaires doivent payer une taxe à leur municipalité. On vous explique tout sur elle!
+                        </p>
+                        <span>Lire l'article &rightarrow;</span>
+                    </div>
+                </div>
+                <div class="w-64 mx-2">
+                    <img class="w-full h-44 object-cover" alt="" src="https://img-19.ccm2.net/cI8qqj-finfDcmx6jMK6Vr-krEw=/1500x/smart/b829396acc244fd484c5ddcdcb2b08f3/ccmcms-commentcamarche/20494859.jpg">
+                    <div class="w-full p-3 bg-gray-100">
+                        <h2 class="font-medium">Tout sur la taxe de Bienvenue lors de l'achat d'une propriété</h2>
+                        <p class="text-sm my-3">
+                            Presque tous les propriétaires doivent payer une taxe à leur municipalité. On vous explique tout sur elle!
+                        </p>
+                        <span>Lire l'article &rightarrow;</span>
+                    </div>
+                </div>
+                <div class="w-64 mx-2">
+                    <img class="w-full h-44 object-cover" alt="" src="https://img-19.ccm2.net/cI8qqj-finfDcmx6jMK6Vr-krEw=/1500x/smart/b829396acc244fd484c5ddcdcb2b08f3/ccmcms-commentcamarche/20494859.jpg">
+                    <div class="w-full p-3 bg-gray-100">
+                        <h2 class="font-medium">Tout sur la taxe de Bienvenue lors de l'achat d'une propriété</h2>
+                        <p class="text-sm my-3">
+                            Presque tous les propriétaires doivent payer une taxe à leur municipalité. On vous explique tout sur elle!
+                        </p>
+                        <span>Lire l'article &rightarrow;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full text-left my-6">
+                <a href="#" class="px-2 py-1 text-2xl font-medium">
+                   <span>&leftarrow;</span>
+                </a>
+                <a href="#" class="px-2 py-1 text-2xl font-medium">
+                    <span>&rightarrow;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="w-1/2 px-10 py-20" style="background: url(./images/Groupe\ 108.png);background-size:cover;">
+            <h2 class="font-medium text-white text-2xl">Lorem ipsum dolor sit amet consectetur.</h2>
+            <form action="" method="post" class="text-sm">
+                <div class="form-group d-flex space-x-4 mt-3">
+                    <input type="text" class="form-control" name="" id="" placeholder="Prénom">
+                    <input type="text" class="form-control" name="" id="" placeholder="Nom">
+                </div>
+                <div class="form-group d-flex space-x-4 mt-3">
+                    <input type="number" class="form-control" name="" id="" placeholder="Téléphone">
+                    <input type="email" class="form-control" name="" id="" placeholder="Courriel">
+                </div>
+                <div class="form-group mt-3">
+                    <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                </div>
+                <div class="form-group mt-3">
+                    <button class="text-white px-2 py-1 text-sm font-medium md:mt-0 hover:text-gray-400 focus:text-gray-400 border-2">
+                        Mes propriétés
+                        <span>&rightarrow;</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="w-1/2"></div>
+    </section>
+
+    <footer class="bg-black h-36 w-full">
+        <div class="px-12 py-6 flex">
+            <img class="h-16 w-5/12" src="./images/logo-footer.png" alt="">
+            <div class="w-5/12 h-12 flex text-white text-sm font-medium pl-8 items-center">
+                <div class="w-1/3 h-full flex items-center justify-center border-gray-600 border-r">514 793-8989</div>
+                <div class="w-1/3 h-full flex items-center justify-center border-gray-600 border-r">ECRIVEZ-MOI</div>
+                <div class="w-1/3 h-full flex items-center justify-center">SUIVEZ-MOI</div>
+            </div>
+            <div class="w-2/12 h-12 text-sm text-white font-medium flex flex-col justify-between">
+                <div class="flex justify-between">
+                    <a href="#">LIENS UTILES</a>
+                    <a href="#">TEMOIGNAGES</a>
+                </div>
+                <div class="flex justify-between">
+                    <a href="#">VIDEOS</a>
+                    <a href="#">AVIS GOOGLE</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full text-center text-xs text-gray-400">
+            Agence immobilière | Franchisé indépendant et autonome de RE/MAX Quebèc inc. | Tous droits résevés Jean-Philippe Richer Courtier immobilier - Coryright &copy; 2021
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Akrobat";
+    src: url("./fonts/Akrobat-Regular.otf") format("otf");
+}
+
+.image-grayscale {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+
+    transition: filter .8s;
+}
+.image-grayscale:hover {
+    -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0);
+}
