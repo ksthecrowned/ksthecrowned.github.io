@@ -1,44 +1,13 @@
 // When the user scrolls the page, execute myFunction 
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {scrollingBar()};
 
-function myFunction() {
+function scrollingBar() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 
-
-// fancy animation
-// (function() {
-//     const text = document.querySelector('.fancy');
-//     const strText = text.textContent;
-//     const splitText = strText.split("");
-
-//     text.textContent = "";
-//     for(let i = 0; i < splitText.length; i++) {
-//         text.innerHTML += '<span class="fancy_s">' + splitText[i] + '</span>';
-//     }
-
-//     let char = 0;
-//     let timer = setInterval(onTick, 50);
-
-//     function onTick() {
-//         const span = document.querySelectorAll('span .fancy_s')[char];
-//         span.classList.add('fade');
-//         char++
-
-//         if(char === splitText.length) {
-//             complete();
-//             return;
-//         }
-//     };
-
-//     function complete() {
-//         clearInterval(timer);
-//         timer = null;
-//     };
-// })();
 
 function autoType(elementClass, typingSpeed){
     var thhis = $(elementClass);
@@ -121,3 +90,9 @@ for (var i = 0; i < btns.length; i++) {z
     this.className += " active";
     });
 }
+
+// var contact = document.querySelector('.contact-btn');
+
+// window.addEventListener('scroll', function() {
+//     console.log('height :' + document.documentElement.scrollHeight);
+// })
