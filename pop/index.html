@@ -19,7 +19,7 @@
                 <a href="#" class="mr-5">About</a>
                 <a href="#" class="mr-5">Blog</a>
                 <a href="#" class="mr-5">Login</a>
-                <select class="ml-6" name="" id="">
+                <select class="ml-6 relative focus:outline-none" name="" id="">
                     <option value="">EN</option>
                     <option value="">DE</option>
                     <option value="">FR</option>
@@ -39,31 +39,31 @@
             </div>
         </section>
 
-        <section class="section circles-container pt-16 flex flex-col md:flex-row justify-center md:space-x-8">
-            <div class="relative circle w-52 h-52 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
+        <section class="section circles-container pt-16 flex flex-wrap flex-col sm:flex-row justify-center space-y-8 sm:space-x-8 sm:space-y-0">
+            <div class="relative circle mx-auto w-52 h-52 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
                 <p class="text-center">Lorem ipsum dolor sit amet. Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella</p>
             </div>
-            <div class="relative circle w-52 h-52 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
+            <div class="relative circle mx-auto w-52 h-52 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
                 <p class="text-center">Lorem ipsum dolor sit amet. Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella</p>
             </div>
-            <div class="relative circle w-52 h-52 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
+            <div class="relative circle mx-auto w-52 h-52 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
                 <p class="text-center">Lorem ipsum dolor sit amet. Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella</p>
             </div>
-            <div class="relative circle w-52 h-52 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
+            <div class="relative circle mx-auto w-52 h-52 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
                 <p class="text-center">Lorem ipsum dolor sit amet. Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella</p>
             </div>
         </section>
 
         <section class="pt-16 section" style="height: 380px;">
             <h2 class="pop-text-xl pop-text-color my-1">find a daycare centre near you</h2>
-            <div class="flex">
-                <div class="w-1/2">
+            <div class="flex flex-col md:flex-row spacey-8 md:space-y-0">
+                <div class="w-full md:w-1/2">
                     <form action="" class="relative flex pr-4">
                         <input class="w-full px-4 py-2 border-2 border-red-800 rounded-full focus:outline-none" type="text" placeholder="My city or postcode">
                         <button class="abolute -ml-8 text-gray-400"><i class="fa fa-search"></i></button>
                     </form>
                     <div class="w-full">
-                        <div class="results-box mt-4">
+                        <div class="results-box mt-4 overflow-y-scroll mr-2" style="height: 250px;">
                             <div class="result flex items-center justify-between p-3 mb-4">
                                 <div class="flex flex-col pop-text-color">
                                     <span class="text-lg pop-red-text">daycare centre l'île aux mômes - Vésenaz 2</span>
@@ -86,26 +86,37 @@
                                     <button class="py-4 text-white px-12 rounded-full pop-red-bg">view</button>
                                 </div>
                             </div>
+                            <div class="result flex items-center justify-between p-3 mb-4">
+                                <div class="flex flex-col pop-text-color">
+                                    <span class="text-lg pop-red-text">Daycare centre in Zurich  </span>
+                                    <span>Oerlikon</span>
+                                    <span>Dörflistrasse 4</span>
+                                    <span>8050 Zurich</span>
+                                </div>
+                                <div class="">
+                                    <button class="py-4 text-white px-12 rounded-full pop-red-bg">view</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="w-1/2 h-full">
+                <div class="w-full md:w-1/2 h-full">
                     <iframe width="100%" height="320px" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
             </div>
         </section>
 
         <section class="pt-20 pop-text-color section">
-            <div class="flex">
-                <div class="w-1/2">
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2">
                     <img class="" width="540px" height="382px" src="./images/fly 1.png" alt="">
                 </div>
-                <div class="w-1/2 px-4">
+                <div class="w-full md:w-1/2 px-4">
                     <h2 class="pop-text-xl my-1">become a leader: support the children of today to become the responsible citizens of tomorrow</h2>
                     <p>Our daycare centres (free market, subsidised, public-private partnerships, etc.) offer an environment that subscribes to the humanist tradition developed by J.-J. Rousseau: teaching “where the child takes part fully in the instruction process” and which prepares them for life within society. This deploys sensitive, intuitive and active methodologies.</p>
                 </div>
             </div>
-            <div class="">
+            <div class="w-full">
                 <p class="my-1">
                     Today, the latest discoveries made in neuroscience recommend a new way of looking at children. We already have proof of this: having an empathetic attitude, calming children and helping them express their emotions and assimilate a love of learning. This encourages better neuronal development and thereby enables greater brain plasticity. The teams in the pop e poppa daycare centres are trained according to these new insights. <br><br>
                     Finally, as a leader, our ambition is to maintain solid and lasting relationships with the policy-making authorities in order to promote the development of daycare centres and promote our vocation. <br><br>
@@ -117,11 +128,10 @@
             </div>
         </section>
 
-        <section class="py-16 relative w-full">
-            <div class="absolute -right-1 rounded-rectangle" style="height: 500px;"></div>
-            <div class="section flex justify-between">
-                <div class="w-4/12 flex flex-col justify-center pop-text-color px-6 z-10">
-                    <h2 class="pop-text-xl my-1 pop-text-xl w-2/3">the joy of growing up</h2>
+        <section class="my-16 relative w-full cards-section">
+            <div class="section flex flex-col md:flex-row justify-between">
+                <div class="w-full md:w-4/12 flex flex-col justify-center pop-text-color px-6 z-10">
+                    <h2 class="pop-text-xl my-1 pop-text-xl w-full md:w-2/3">the joy of growing up</h2>
                     <p>
                         At pop e poppa, we constantly anticipate and adapt to the needs of families today. Our key words are innovation and flexibility. Our main theme involves remaining at the forefront of education and living ecologically every day.
                     </p>
@@ -129,8 +139,8 @@
                         <button class="py-4 text-white px-12 rounded-full pop-red-bg">read more</button>
                     </div>    
                 </div>
-                <div class="w-8/12 flex flex-wrap justify-between z-10">
-                    <div class="md:w-1/2 p-4">
+                <div class="w-full md:w-8/12 flex flex-wrap justify-between z-10">
+                    <div class="w-full md:w-1/2 p-4">
                         <div class="card bg-white p-5">
                             <div class="rounded-full w-16 h-16 flex items-center justify-center pop-red-bg">
                                 <svg width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,7 +153,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="md:w-1/2 p-4">
+                    <div class="w-full md:w-1/2 p-4">
                         <div class="card bg-white p-5">
                             <div class="rounded-full w-16 h-16 flex items-center justify-center pop-red-bg">
                                 <svg width="38" height="31" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,7 +166,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="md:w-1/2 p-4">
+                    <div class="w-full md:w-1/2 p-4">
                         <div class="card bg-white p-5">
                             <div class="rounded-full w-16 h-16 flex items-center justify-center pop-red-bg">
                                 <svg width="50" height="50" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -169,7 +179,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="md:w-1/2 p-4">
+                    <div class="w-full md:w-1/2 p-4">
                         <div class="card bg-white p-5">
                             <div class="rounded-full w-16 h-16 flex items-center justify-center pop-red-bg">
                                 <svg width="50" height="50" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -187,12 +197,12 @@
         </section>
 
         <section class="green-section">
-            <div class="section py-6">
+            <div class="section p-6">
                 <div class="text-white">
                     <h3 class="pop-text-xl my-2">eco-responsibility</h3>
                     <p class="md:w-8/12">Labelled "eco-friendly", we support sustainable development and our education respects the child and the environment so that each child can become a responsible citizen.</p>
                 </div>
-                <div class="flex text-white">
+                <div class="flex flex-col md:flex-row text-white">
                     <div class="w-full md:w-1/4 md:p-10 flex flex-col items-center justify-center">
                         <div class="flex items-center justify-center h-20 w-20">
                             <svg width="61" height="60" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -269,15 +279,15 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <button class="py-4 text-red-600 px-12 rounded-full bg-white">read more</button>
+                    <button class="py-4 pop-red-text px-12 rounded-full bg-white">read more</button>
                 </div>
             </div>
         </section>
 
-        <section class="pt-16">
+        <section class="pt-12">
             <div class="section">
                 <h2 class="pop-text-xl pop-text-color text-semibold">Instagram @pop_e_poppa</h2>
-                <div class="flex md:space-x-4">
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                     <div class="w-full md:w-1/4">
                         <img style="width:255px;height:255px;" class="rounded-xl object-cover" src="./images/image 7.png" alt="">
                     </div>
@@ -294,12 +304,12 @@
             </div>
         </section>
 
-        <section class="pt-16">
+        <section class="pt-12">
             <div class="section">
                 <h2 class="pop-text-xl pop-text-color text-semibold">our certificates</h2>
-                <div class="flex md:space-x-4">
-                    <div class="w-full md:w-1/4 h-44 bg-gray-100 rounded-xl">
-                        
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="w-full md:w-1/4 h-44 bg-gray-100 rounded-xl relative">
+                        <div class="absolute bottom-3 left-3 w-11/12 rounded-full bg-gray-200 px-6 py-2">pop up Lorem, ipsum dolor sit amet consectetur.</div>
                     </div>
                     <div class="w-full md:w-1/4 h-44 bg-gray-100 rounded-xl">
                         
@@ -314,10 +324,13 @@
             </div>
         </section>
 
-        <section class="pt-16">
+        <section class="pt-12">
             <div class="section">
-                <h2 class="pop-text-xl pop-text-color text-semibold">news and events</h2>
-                <div class="flex md:space-x-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <h2 class="pop-text-xl pop-text-color text-semibold">news and events</h2>
+                    <a href="#" class="pop-red-text">all news</a>
+                </div>
+                <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6">
                     <div class="w-full md:w-1/3 relative" style="width: 350px;height: 390px;">
                         <img class="rounded-2xl object-cover absolute h-full w-full" src="./images/image 9.png" alt="">
                         <div class="absolute w-full h-full rounded-2xl gradient-bg">
@@ -359,121 +372,10 @@
         </section>
     </main>
 
-    <footer class="w-full mt-16 h-36">
+    <footer class="w-11/12 mx-auto mt-16 h-28">
         <div class="footer"></div>
     </footer>
-    
 
-
-    <!-- <header>
-        <div class="head">
-            <div class="logo">
-                <a href="#">
-                    <img src="./images/logo 1.png" alt="">
-                </a>
-            </div>
-            <div class="navigation">
-                <a href="#">Our Structures</a>
-                <a href="#">Eco-Responsibility</a>
-                <a href="#">About</a>
-                <a href="">Blog</a>
-                <a href="">Login</a>
-                <select name="" id="">
-                    <option value="">EN</option>
-                    <option value="">DE</option>
-                    <option value="">FR</option>
-                </select>
-            </div>
-        </div>
-    </header>
-    <main>
-        
-
-        <section>
-            <div class="circles-container">
-                <div class="circle">
-                    <p>Lorem ipsum dolor sit amet. Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella</p>
-                </div>
-                <div class="circle">
-                    <p>Lorem ipsum dolor sit amet. Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella</p>
-                </div>
-                <div class="circle">
-                    <p>Lorem ipsum dolor sit amet. Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella</p>
-                </div>
-                <div class="circle">
-                    <p>Lorem ipsum dolor sit amet. Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="find-title">find a daycare centre near you</h2>
-            <div class="find-container">
-                <div class="left-part">
-                    <form action="">
-                        <input type="text" placeholder="My city or postcode">
-                        <button><i class="fa fa-search"></i></button>
-                    </form>
-                    <div class="results-box">
-                        <div class="result">
-                            <div class="text">
-                                <span>daycare centre l'île aux mômes - Vésenaz 2</span>
-                                <span>anières - collonge-bellerive - corsier -</span>
-                                <span>hermance</span>
-                                <span>Chemin des Rayes 11</span>
-                                <span>1222 Vésenaz</span>
-                            </div>
-                            <button>view</button>
-                        </div>
-                        <div class="result">
-                            <div class="text">
-                                <span>daycare centre l'île aux mômes - Vésenaz 2</span>
-                                <span>anières - collonge-bellerive - corsier -</span>
-                                <span>hermance</span>
-                                <span>Chemin des Rayes 11</span>
-                                <span>1222 Vésenaz</span>
-                            </div>
-                            <button>view</button>
-                        </div>
-                        <div class="result">
-                            <div class="text">
-                                <span>daycare centre l'île aux mômes - Vésenaz 2</span>
-                                <span>anières - collonge-bellerive - corsier -</span>
-                                <span>hermance</span>
-                                <span>Chemin des Rayes 11</span>
-                                <span>1222 Vésenaz</span>
-                            </div>
-                            <button>view</button>
-                        </div>
-                        <div class="result">
-                            <div class="text">
-                                <span>daycare centre l'île aux mômes - Vésenaz 2</span>
-                                <span>anières - collonge-bellerive - corsier -</span>
-                                <span>hermance</span>
-                                <span>Chemin des Rayes 11</span>
-                                <span>1222 Vésenaz</span>
-                            </div>
-                            <button>view</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-part">
-                    <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-4">
-            <div class="top-part">
-                <img src="./images/fly 1.png" alt="">
-                <div>
-                    <h2>become a leader: support the children of today to become the responsible citizens of tomorrow</h2>
-                    <p>Our daycare centres (free market, subsidised, public-private partnerships, etc.) offer an environment that subscribes to the humanist tradition developed by J.-J. Rousseau: teaching “where the child takes part fully in the instruction process” and which prepares them for life within society. This deploys sensitive, intuitive and active methodologies.</p>
-                </div>
-            </div>
-            <p>Today, the latest discoveries made in neuroscience recommend a new way of looking at children. We already have proof of this: having an empathetic attitude, calming children and helping them express their emotions and assimilate a love of learning. This encourages better neuronal development and thereby enables greater brain plasticity. The teams in the pop e poppa daycare centres are trained according to these new insights. Finally, as a leader, our ambition is to maintain solid and lasting relationships with the policy-making authorities in order to promote the development of daycare centres and promote our vocation. More than ever, the time has come to initiate a process of reflection at the national level in Switzerland, in order to create the optimum conditions for the evolution of the daycare sector. The future of children and our society are central to this approach.</p>
-            <button>read more about us</section>
-    </main> -->
 </body>
 </html>
 

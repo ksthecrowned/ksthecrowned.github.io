@@ -90,7 +90,19 @@ section.hero-section .hero-container button {
     }
 }
 
+/* Results scrollbar */
+.results-box::-webkit-scrollbar {
+    border-radius: 50px;
+    width: 10px;
+    background: gray;
+}
+.results-box::-webkit-scrollbar-thumb {
+    background: #BA0029;
+}
 
+
+
+/* Utilities */
 .pop-text-color {
     color: #76777A;
 }
@@ -110,12 +122,30 @@ section.hero-section .hero-container button {
     font-size: 20px;
     line-height: 26px;
 }
-.rounded-rectangle {
-    left: 650px;
+
+
+/* Cards section */
+.card {
+    box-shadow: 0px 4px 10px rgba(102, 102, 102, 0.3);
+    border-radius: 25px;
+}
+.cards-section::before {
+    content: "";
+    position: absolute;
+    left: 45%;
+    height: 100%;
     width: 1040px;
     background: #F6F0EE;
     border-radius: 65px 0px 0px 65px;
 }
+
+@media (max-width: 600px) {
+    .cards-section::before {
+        display: none;
+    }
+}
+
+/* Green section */
 .green-section {
     width: 100%;
     max-width: 1810px;
@@ -123,12 +153,27 @@ section.hero-section .hero-container button {
     background: #26B560;
     border-radius: 65px;
 }
+
+/* Red gradient background */
 .gradient-bg {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(237, 142, 155, 0.471477) 47.15%, #D9102A 100%);
 }
 
+/* Header select */
+header select::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+header select option {
+    border: 0;
+}
 
-/*  */
+
+/* Mickey mouse section */
 .circle {
     transition: .2s linear ease-in-out;
 }
@@ -160,12 +205,12 @@ section.circles-container .circle:hover {
     z-index: -1;
 }
 
+
 input::placeholder {
     font-size: 14px;
     line-height: 17px;
 }
 
-.card {
-    box-shadow: 0px 4px 10px rgba(102, 102, 102, 0.3);
-    border-radius: 25px;
+input[type=text]:focus {
+    border: 3px solid #BA0029;
 }
