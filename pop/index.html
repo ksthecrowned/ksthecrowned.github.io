@@ -4,29 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/tailwind.css" rel="stylesheet">
-    <link href="./css/animation.css" rel="stylesheet">
+    <link href="./css/extra-styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 </head>
 <body class="overflow-x-hidden">
     <header class="header-area fixed bg-white w-full z-50">
-        <!-- site-navbar start -->
         <div class="navbar-area px-4 md:px-8">
             <div class="">
-                <nav class="site-navbar">
-                    <!-- site logo -->
+                <nav class="site-navbar flex items-center justify-between">
                     <a href="#home" class="site-logo">
                         <img class="h-8" src="./images/logo 1.png" alt="">
                     </a>
             
-                    <!-- site menu/nav -->
                     <ul class="pop-text-color bg-white">
-                        <li><a href="#">Our Structures</a></li>
-                        <li><a href="#">Eco-Responsibility</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li class="pt-4">
-                            <select class="ml-6 flex items-center justify-center relative focus:outline-none" name="" id="">
+                        <li class="p-3 md:p-5"><a href="#">Our Structures</a></li>
+                        <li class="p-3 md:p-5"><a href="#">Eco-Responsibility</a></li>
+                        <li class="p-3 md:p-5"><a href="#">About</a></li>
+                        <li class="p-3 md:p-5"><a href="#">Blog</a></li>
+                        <li class="p-3 md:p-5"><a href="#">Login</a></li>
+                        <li class="p-3 md:p-5 flex items-center justify-center select mt-2">
+                            <select class="flex items-center justify-center relative focus:outline-none" name="" id="">
                                 <option value="">EN</option>
                                 <option value="">DE</option>
                                 <option value="">FR</option>
@@ -35,7 +32,7 @@
                     </ul>
             
                     <!-- nav-toggler for mobile version only -->
-                    <button class="nav-toggler focus:outline-none">
+                    <button class="nav-toggler p-2 focus:outline-none">
                         <span>
                             <svg width="39" height="24" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="39" height="2" fill="#BA0029"/>
@@ -46,100 +43,8 @@
                     </button>
                 </nav>
             </div>
-        </div><!-- navbar-area end -->
+        </div>
     </header>
-
-    <style>
-        .site-navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .site-navbar ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-        }
-        .site-navbar ul li a {
-            padding: 20px;
-            display: block;
-            text-decoration: none;
-        }
-          
-          
-        .nav-toggler {
-            padding: 5px;
-            background-color: transparent;
-            cursor: pointer;
-            height: 39px;
-            display: none;
-        }
-          
-        /* mobile breakpoint start */
-        @media screen and (max-width: 767px) {
-            .nav-toggler{
-                display: block;
-            }
-            .site-navbar {
-                min-height: 60px;
-            }
-            .site-navbar ul {
-                position: absolute;
-                width: 100%;
-                height: calc(100vh - 60px);
-                left: 0;
-                top: 60px;
-                flex-direction: column;
-                align-items: center;
-                max-height: 0;
-                overflow: hidden;
-                transition: .3s;
-            }
-            .site-navbar ul li {
-                width: 100%;
-                text-align: center;
-            }
-            .site-navbar ul li a {
-                padding: 25px;
-            }
-            .site-navbar ul.open {
-                max-height: 100vh;
-                overflow: visible;
-            }
-        }
-    </style>
-
-    <script>
-        // define all UI variable
-        const navToggler = document.querySelector('.nav-toggler');
-        const navMenu = document.querySelector('.site-navbar ul');
-        const navLinks = document.querySelectorAll('.site-navbar a');
-
-        // load all event listners
-        allEventListners();
-
-        // functions of all event listners
-        function allEventListners() {
-            // toggler icon click event
-            navToggler.addEventListener('click', togglerClick);
-            // nav links click event
-            navLinks.forEach( elem => elem.addEventListener('click', navLinkClick));
-        }
-
-        // togglerClick function
-        function togglerClick() {
-            navToggler.classList.toggle('toggler-open');
-            navMenu.classList.toggle('open');
-        }
-
-        // navLinkClick function
-        function navLinkClick() {
-            if(navMenu.classList.contains('open')) {
-                navToggler.click();
-            }
-        }
-    </script>
 
     <main class="mx-auto pt-16 md:px-3">
 
@@ -245,7 +150,7 @@
             </div>
         </section>
 
-        <section class="pt-20 px-3 pop-text-color section">
+        <section class="pt-12 px-3 pop-text-color section">
             <div class="flex flex-col md:flex-row">
                 <div class="w-full md:w-1/2">
                     <img class="" width="540px" height="382px" src="./images/fly 1.png" alt="">
@@ -423,7 +328,7 @@
             </div>
         </section>
 
-        <section class="md:pt-12 px-3">
+        <section class="px-3">
             <div class="section">
                 <h2 class="pop-text-xl pop-text-color text-semibold">Instagram @pop_e_poppa</h2>
                 <div class="flex flex-wrap">
@@ -443,7 +348,7 @@
             </div>
         </section>
 
-        <section class="md:pt-12 px-3">
+        <section class="px-3">
             <div class="section">
                 <h2 class="pop-text-xl pop-text-color text-semibold">our certificates</h2>
                 <div class="flex flex-wrap">
@@ -468,7 +373,7 @@
             </div>
         </section>
 
-        <section class="md:pt-12 px-3">
+        <section class="px-3">
             <div class="section">
                 <div class="flex flex-col md:flex-row md:justify-between md:items-center">
                     <h2 class="pop-text-xl pop-text-color text-semibold">news and events</h2>
@@ -523,6 +428,7 @@
         <div class="footer"></div>
     </footer>
 
+    <script src="./js/main.js"></script>
 </body>
 </html>
 
