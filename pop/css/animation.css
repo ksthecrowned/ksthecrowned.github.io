@@ -36,8 +36,8 @@ section.hero-section img.hero-image {
 
 section.hero-section .hero-container {
     position: absolute;
-    width: 100%;
-    max-width: 494px;
+    /* width: 100%;
+    max-width: 494px; */
     height: 100%;
     left: 10%;
     top: 32%;
