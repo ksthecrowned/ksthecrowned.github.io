@@ -38,7 +38,7 @@
                     </a>
             
                     <!-- site menu/nav -->
-                    <ul class="pop-text-color">
+                    <ul class="pop-text-color bg-white">
                         <li><a href="#">Our Structures</a></li>
                         <li><a href="#">Eco-Responsibility</a></li>
                         <li><a href="#">About</a></li>
@@ -161,23 +161,23 @@
 
         // functions of all event listners
         function allEventListners() {
-        // toggler icon click event
-        navToggler.addEventListener('click', togglerClick);
-        // nav links click event
-        navLinks.forEach( elem => elem.addEventListener('click', navLinkClick));
+            // toggler icon click event
+            navToggler.addEventListener('click', togglerClick);
+            // nav links click event
+            navLinks.forEach( elem => elem.addEventListener('click', navLinkClick));
         }
 
         // togglerClick function
         function togglerClick() {
-        navToggler.classList.toggle('toggler-open');
-        navMenu.classList.toggle('open');
+            navToggler.classList.toggle('toggler-open');
+            navMenu.classList.toggle('open');
         }
 
         // navLinkClick function
         function navLinkClick() {
-        if(navMenu.classList.contains('open')) {
-            navToggler.click();
-        }
+            if(navMenu.classList.contains('open')) {
+                navToggler.click();
+            }
         }
     </script>
 

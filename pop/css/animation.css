@@ -83,7 +83,7 @@ section.hero-section .hero-container button {
     }
     section.hero-section .hero-container {
         left: 10%;
-        top: 25
+        top: 25%;
     }
     section.hero-section .hero-container button {
         width: 250px;
@@ -92,10 +92,24 @@ section.hero-section .hero-container button {
 }
 @media screen and (max-width: 767px) {
     section.hero-section {
-        height: 100vh;
+        height: calc(100vh - 60px);
     }
     section.hero-section img.hero-image {
         object-fit: cover;
+        background-position: bottom;
+    }
+    section.hero-section .hero-container {
+        left: 0;
+        top: 5%;
+        padding: 10px;
+    }
+    section.hero-section .hero-container h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    section.hero-section .hero-container p {
+        font-size: 35px;
+        line-height: 40px;
     }
 }
 
