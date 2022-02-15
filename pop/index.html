@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 </head>
 <body class="overflow-x-hidden">
-    <header class="bg-white fixed w-full z-50">
+    <!-- <header class="bg-white fixed w-full z-50">
         <div class="flex justify-between mx-auto max-w-7xl px-10 py-3">
             <a href="#">
                 <img class="h-8" src="./images/logo 1.png" alt="">
@@ -19,14 +19,178 @@
                 <a href="#" class="mr-5">About</a>
                 <a href="#" class="mr-5">Blog</a>
                 <a href="#" class="mr-5">Login</a>
-                <select class="ml-6 relative focus:outline-none" name="" id="">
+                <select class="ml-6 flex items-center justify-center relative focus:outline-none" name="" id="">
                     <option value="">EN</option>
                     <option value="">DE</option>
                     <option value="">FR</option>
                 </select>
             </div>
         </div>
+    </header> -->
+    <header class="header-area fixed bg-white w-full z-50">
+        <!-- site-navbar start -->
+        <div class="navbar-area px-4">
+            <div class="">
+                <nav class="site-navbar">
+                    <!-- site logo -->
+                    <a href="#home" class="site-logo">
+                        <img class="h-8" src="./images/logo 1.png" alt="">
+                    </a>
+            
+                    <!-- site menu/nav -->
+                    <ul class="pop-text-color">
+                        <li><a href="#">Our Structures</a></li>
+                        <li><a href="#">Eco-Responsibility</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li>
+                            <select class="ml-6 flex items-center justify-center relative focus:outline-none" name="" id="">
+                                <option value="">EN</option>
+                                <option value="">DE</option>
+                                <option value="">FR</option>
+                            </select>
+                        </li>
+                    </ul>
+            
+                    <!-- nav-toggler for mobile version only -->
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div><!-- navbar-area end -->
     </header>
+
+    <style>
+        .site-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+          .site-navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+          }
+          .site-navbar ul li a {
+            padding: 20px;
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+          
+          
+          /* nav-toggler css start */
+          .nav-toggler {
+            border: 3px solid #fff;
+            padding: 5px;
+            background-color: transparent;
+            cursor: pointer;
+            height: 39px;
+            display: none;
+          }
+          .nav-toggler span, 
+          .nav-toggler span:before, 
+          .nav-toggler span:after {
+            width: 28px;
+            height: 3px;
+            background-color: #fff;
+            display: block;
+            transition: .3s;
+          }
+          .nav-toggler span:before {
+            content: '';
+            transform: translateY(-9px);
+          }
+          .nav-toggler span:after {
+            content: '';
+            transform: translateY(6px);
+          }
+          .nav-toggler.toggler-open span {
+            background-color: transparent;
+          }
+          .nav-toggler.toggler-open span:before {
+            transform: translateY(0px) rotate(45deg);
+          }
+          .nav-toggler.toggler-open span:after {
+            transform: translateY(-3px) rotate(-45deg);
+          }
+          
+        /* mobile breakpoint start */
+        @media screen and (max-width: 767px) {
+            .nav-toggler{
+                display: block;
+            }
+            .site-navbar {
+                min-height: 60px;
+            }
+            .site-navbar ul {
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 60px);
+                left: 0;
+                top: 60px;
+                flex-direction: column;
+                align-items: center;
+                border-top: 1px solid #444;
+                background-color: rgba(0,0,0,.75);
+                max-height: 0;
+                overflow: hidden;
+                transition: .3s;
+            }
+            .site-navbar ul li {
+                width: 100%;
+                text-align: center;
+            }
+            .site-navbar ul li a {
+                padding: 25px;
+            }
+            .site-navbar ul li a:hover {
+                background-color: rgba(255,255,255,.1);
+            }
+            .site-navbar ul.open {
+                max-height: 100vh;
+                overflow: visible;
+            }
+            .intro-area h2 {
+                font-size: 36px;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+
+    <script>
+        // define all UI variable
+        const navToggler = document.querySelector('.nav-toggler');
+        const navMenu = document.querySelector('.site-navbar ul');
+        const navLinks = document.querySelectorAll('.site-navbar a');
+
+        // load all event listners
+        allEventListners();
+
+        // functions of all event listners
+        function allEventListners() {
+        // toggler icon click event
+        navToggler.addEventListener('click', togglerClick);
+        // nav links click event
+        navLinks.forEach( elem => elem.addEventListener('click', navLinkClick));
+        }
+
+        // togglerClick function
+        function togglerClick() {
+        navToggler.classList.toggle('toggler-open');
+        navMenu.classList.toggle('open');
+        }
+
+        // navLinkClick function
+        function navLinkClick() {
+        if(navMenu.classList.contains('open')) {
+            navToggler.click();
+        }
+        }
+    </script>
 
     <main class="mx-auto pt-16 px-3">
 
@@ -39,17 +203,17 @@
             </div>
         </section>
 
-        <section class="section circles-container pt-16 flex flex-wrap flex-col sm:flex-row justify-center space-y-8 sm:space-x-8 sm:space-y-0">
-            <div class="relative circle mx-auto w-52 h-52 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
+        <section class="section circles-container pt-16 flex flex-wrap flex-col sm:flex-row justify-center space-y-8 sm:space-x-2 sm:space-y-0">
+            <div class="relative circle mx-auto w-60 h-60 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
                 <p class="text-center">Lorem ipsum dolor sit amet. Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella</p>
             </div>
-            <div class="relative circle mx-auto w-52 h-52 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
+            <div class="relative circle mx-auto w-60 h-60 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
                 <p class="text-center">Lorem ipsum dolor sit amet. Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella</p>
             </div>
-            <div class="relative circle mx-auto w-52 h-52 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
+            <div class="relative circle mx-auto w-60 h-60 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
                 <p class="text-center">Lorem ipsum dolor sit amet. Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella</p>
             </div>
-            <div class="relative circle mx-auto w-52 h-52 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
+            <div class="relative circle mx-auto w-60 h-60 rounded-full flex items-center justify-center p-4 border-4 border-red-800 cursor-pointer">
                 <p class="text-center">Lorem ipsum dolor sit amet. Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella</p>
             </div>
         </section>
@@ -70,6 +234,28 @@
                                     <span>anières - collonge-bellerive - corsier - <br> hermance</span>
                                     <span>Chemin des Rayes 11</span>
                                     <span>1222 Vésenaz</span>
+                                </div>
+                                <div class="">
+                                    <button class="py-4 text-white px-12 rounded-full pop-red-bg">view</button>
+                                </div>
+                            </div>
+                            <div class="result flex items-center justify-between p-3 mb-4">
+                                <div class="flex flex-col pop-text-color">
+                                    <span class="text-lg pop-red-text">Daycare centre in Zurich  </span>
+                                    <span>Oerlikon</span>
+                                    <span>Dörflistrasse 4</span>
+                                    <span>8050 Zurich</span>
+                                </div>
+                                <div class="">
+                                    <button class="py-4 text-white px-12 rounded-full pop-red-bg">view</button>
+                                </div>
+                            </div>
+                            <div class="result flex items-center justify-between p-3 mb-4">
+                                <div class="flex flex-col pop-text-color">
+                                    <span class="text-lg pop-red-text">Daycare centre in Zurich  </span>
+                                    <span>Oerlikon</span>
+                                    <span>Dörflistrasse 4</span>
+                                    <span>8050 Zurich</span>
                                 </div>
                                 <div class="">
                                     <button class="py-4 text-white px-12 rounded-full pop-red-bg">view</button>

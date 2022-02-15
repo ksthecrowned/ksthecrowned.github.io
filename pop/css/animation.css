@@ -90,14 +90,32 @@ section.hero-section .hero-container button {
     }
 }
 
+/* Select */
+header select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #BA0029;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding-left: 2px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
 /* Results scrollbar */
 .results-box::-webkit-scrollbar {
     border-radius: 50px;
     width: 10px;
-    background: gray;
+    background: #f5f5f5
 }
 .results-box::-webkit-scrollbar-thumb {
     background: #BA0029;
+    border-radius: 50px;
 }
 
 
