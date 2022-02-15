@@ -8,28 +8,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 </head>
 <body class="overflow-x-hidden">
-    <!-- <header class="bg-white fixed w-full z-50">
-        <div class="flex justify-between mx-auto max-w-7xl px-10 py-3">
-            <a href="#">
-                <img class="h-8" src="./images/logo 1.png" alt="">
-            </a>
-            <div id="navigation" class="flex flex-col md:flex-row items-center pop-text-color">
-                <a href="#" class="mr-5">Our Structures</a>
-                <a href="#" class="mr-5">Eco-Responsibility</a>
-                <a href="#" class="mr-5">About</a>
-                <a href="#" class="mr-5">Blog</a>
-                <a href="#" class="mr-5">Login</a>
-                <select class="ml-6 flex items-center justify-center relative focus:outline-none" name="" id="">
-                    <option value="">EN</option>
-                    <option value="">DE</option>
-                    <option value="">FR</option>
-                </select>
-            </div>
-        </div>
-    </header> -->
     <header class="header-area fixed bg-white w-full z-50">
         <!-- site-navbar start -->
-        <div class="navbar-area px-4">
+        <div class="navbar-area px-4 md:px-8">
             <div class="">
                 <nav class="site-navbar">
                     <!-- site logo -->
@@ -54,8 +35,14 @@
                     </ul>
             
                     <!-- nav-toggler for mobile version only -->
-                    <button class="nav-toggler">
-                        <span></span>
+                    <button class="nav-toggler focus:outline-none">
+                        <span>
+                            <svg width="39" height="24" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="39" height="2" fill="#BA0029"/>
+                                <rect y="11" width="39" height="2" fill="#BA0029"/>
+                                <rect y="22" width="39" height="2" fill="#BA0029"/>
+                            </svg>
+                        </span>
                     </button>
                 </nav>
             </div>
@@ -82,39 +69,12 @@
           
           
         .nav-toggler {
-            border: 3px solid #000;
             padding: 5px;
             background-color: transparent;
             cursor: pointer;
             height: 39px;
             display: none;
         }
-          .nav-toggler span, 
-          .nav-toggler span:before, 
-          .nav-toggler span:after {
-            width: 28px;
-            height: 3px;
-            background-color: #000;
-            display: block;
-            transition: .3s;
-          }
-          .nav-toggler span:before {
-            content: '';
-            transform: translateY(-9px);
-          }
-          .nav-toggler span:after {
-            content: '';
-            transform: translateY(6px);
-          }
-          .nav-toggler.toggler-open span {
-            background-color: transparent;
-          }
-          .nav-toggler.toggler-open span:before {
-            transform: translateY(0px) rotate(45deg);
-          }
-          .nav-toggler.toggler-open span:after {
-            transform: translateY(-3px) rotate(-45deg);
-          }
           
         /* mobile breakpoint start */
         @media screen and (max-width: 767px) {
@@ -207,17 +167,21 @@
             </div>
         </section>
 
-        <section class="pt-16 section" style="height: 380px;">
+        <section class="pt-16 px-3 section">
             <h2 class="pop-text-xl pop-text-color my-1">find a daycare centre near you</h2>
-            <div class="flex flex-col md:flex-row spacey-8 md:space-y-0">
+            <div class="flex flex-col-reverse md:flex-row spacey-8 md:space-y-0">
                 <div class="w-full md:w-1/2">
                     <form action="" class="relative flex pr-4">
                         <input class="w-full px-4 py-2 border-2 border-red-800 rounded-full focus:outline-none" type="text" placeholder="My city or postcode">
-                        <button class="abolute -ml-8 text-gray-400"><i class="fa fa-search"></i></button>
+                        <button class="abolute -ml-8 text-gray-400 py-2">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.7556 18.5774L14.0682 12.89C15.1699 11.5292 15.8332 9.80003 15.8332 7.91672C15.8332 3.55177 12.2815 0.00012207 7.91656 0.00012207C3.55161 0.00012207 0 3.55173 0 7.91669C0 12.2816 3.55165 15.8333 7.9166 15.8333C9.7999 15.8333 11.5291 15.17 12.8899 14.0683L18.5773 19.7558C18.7398 19.9182 18.9531 19.9999 19.1665 19.9999C19.3798 19.9999 19.5932 19.9182 19.7557 19.7558C20.0815 19.4299 20.0815 18.9033 19.7556 18.5774ZM7.9166 14.1666C4.46996 14.1666 1.66666 11.3633 1.66666 7.91669C1.66666 4.47004 4.46996 1.66675 7.9166 1.66675C11.3632 1.66675 14.1665 4.47004 14.1665 7.91669C14.1665 11.3633 11.3632 14.1666 7.9166 14.1666Z" fill="#BA0029"/>
+                            </svg>
+                        </button>
                     </form>
                     <div class="w-full">
                         <div class="results-box mt-4 overflow-y-scroll mr-2" style="height: 250px;">
-                            <div class="result flex items-center justify-between p-3 mb-4">
+                            <div class="result flex items-center justify-between p-3 md:mb-4">
                                 <div class="flex flex-col pop-text-color">
                                     <span class="text-lg pop-red-text">daycare centre l'île aux mômes - Vésenaz 2</span>
                                     <span>anières - collonge-bellerive - corsier - <br> hermance</span>
@@ -228,7 +192,7 @@
                                     <button class="py-4 text-white px-12 rounded-full pop-red-bg">view</button>
                                 </div>
                             </div>
-                            <div class="result flex items-center justify-between p-3 mb-4">
+                            <div class="result flex items-center justify-between p-3 md:mb-4">
                                 <div class="flex flex-col pop-text-color">
                                     <span class="text-lg pop-red-text">Daycare centre in Zurich  </span>
                                     <span>Oerlikon</span>
@@ -281,12 +245,12 @@
             </div>
         </section>
 
-        <section class="pt-20 pop-text-color section">
+        <section class="pt-20 px-3 pop-text-color section">
             <div class="flex flex-col md:flex-row">
                 <div class="w-full md:w-1/2">
                     <img class="" width="540px" height="382px" src="./images/fly 1.png" alt="">
                 </div>
-                <div class="w-full md:w-1/2 px-4">
+                <div class="w-full md:w-1/2 md:px-4">
                     <h2 class="pop-text-xl my-1">become a leader: support the children of today to become the responsible citizens of tomorrow</h2>
                     <p>Our daycare centres (free market, subsidised, public-private partnerships, etc.) offer an environment that subscribes to the humanist tradition developed by J.-J. Rousseau: teaching “where the child takes part fully in the instruction process” and which prepares them for life within society. This deploys sensitive, intuitive and active methodologies.</p>
                 </div>
@@ -303,9 +267,9 @@
             </div>
         </section>
 
-        <section class="my-16 relative w-full cards-section">
+        <section class="my-16 px-3 relative w-full cards-section overflow-hidden">
             <div class="section flex flex-col md:flex-row justify-between">
-                <div class="w-full md:w-4/12 flex flex-col justify-center pop-text-color px-6 z-10">
+                <div class="w-full md:w-4/12 flex flex-col justify-center pop-text-color px-4 md:px-6 z-10">
                     <h2 class="pop-text-xl my-1 pop-text-xl w-full md:w-2/3">the joy of growing up</h2>
                     <p>
                         At pop e poppa, we constantly anticipate and adapt to the needs of families today. Our key words are innovation and flexibility. Our main theme involves remaining at the forefront of education and living ecologically every day.
@@ -314,7 +278,7 @@
                         <button class="py-4 text-white px-12 rounded-full pop-red-bg">read more</button>
                     </div>    
                 </div>
-                <div class="w-full md:w-8/12 flex flex-wrap justify-between z-10">
+                <div class="w-full md:w-8/12 flex flex-wrap justify-between z-10 mt-10 md:mt-0">
                     <div class="w-full md:w-1/2 p-4">
                         <div class="card bg-white p-5">
                             <div class="rounded-full w-16 h-16 flex items-center justify-center pop-red-bg">
@@ -371,14 +335,14 @@
             </div>
         </section>
 
-        <section class="green-section">
-            <div class="section p-6">
+        <section class="green-section px-3">
+            <div class="section px-4 py-6 md:p-6">
                 <div class="text-white">
                     <h3 class="pop-text-xl my-2">eco-responsibility</h3>
                     <p class="md:w-8/12">Labelled "eco-friendly", we support sustainable development and our education respects the child and the environment so that each child can become a responsible citizen.</p>
                 </div>
-                <div class="flex flex-col md:flex-row text-white">
-                    <div class="w-full md:w-1/4 md:p-10 flex flex-col items-center justify-center">
+                <div class="flex flex-wrap text-white">
+                    <div class="w-1/2 md:w-1/4 p-2 md:p-10 flex flex-col items-center justify-center">
                         <div class="flex items-center justify-center h-20 w-20">
                             <svg width="61" height="60" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M40.034 19.9881C40.0609 14.675 38.0024 9.65777 34.2485 5.87806C30.5081 2.1118 25.503 0.0269019 20.1076 0C9.16899 0 0.235076 8.90452 0.181258 19.8267C0.167803 24.0099 1.446 27.8972 3.65257 31.112C3.69293 31.1793 3.73329 31.2465 3.78711 31.3003C7.37951 36.4251 13.313 39.7879 20.0269 39.8148H20.1076C31.0463 39.8282 39.9937 30.9372 40.034 19.9881ZM32.19 7.9226C34.41 10.1555 35.9169 12.8994 36.63 15.8856C36.4551 16.2487 36.3205 16.6119 36.2129 16.9347C36.1456 17.1499 36.0784 17.3652 35.9842 17.5669C35.9438 17.6611 35.89 17.7418 35.8496 17.7956C35.742 17.7149 35.594 17.6073 35.4729 17.5131C34.9751 17.123 34.2351 16.5312 33.1721 16.5581C32.8627 16.5716 32.5801 16.6388 32.3245 16.733C32.3514 16.2756 32.3649 15.8183 32.3245 15.3475C32.2438 14.2042 31.7998 13.4106 31.0329 12.9936C30.5081 12.7111 30.0103 12.6977 29.6201 12.6977C29.1761 12.6842 28.7321 12.6439 28.3016 12.5766C28.315 12.5497 28.3419 12.5228 28.3554 12.4959L31.8536 7.64013C31.9747 7.73429 32.0958 7.82845 32.19 7.9226ZM5.40168 23.9292C5.46895 24.0368 5.54968 24.131 5.6304 24.2386C5.65731 24.2789 5.68422 24.3058 5.72459 24.3462L5.64386 24.4538C5.26713 24.9918 4.80967 25.6644 4.40603 26.4714C3.54493 24.4269 3.08747 22.194 3.08747 19.8401C3.08747 19.2617 3.12783 18.6968 3.18165 18.1319C4.09657 17.7552 5.05185 17.4862 6.06096 17.3652C6.07441 17.3652 6.08786 17.3652 6.10132 17.3517C4.64821 19.0869 3.94857 21.8712 5.40168 23.9292ZM21.8029 31.6501L21.628 31.9056C21.2782 32.4033 20.8342 33.0221 20.6997 33.8695C20.5247 34.9052 20.9149 36.0082 21.7088 36.8556C21.184 36.9094 20.6593 36.9363 20.1211 36.9363H20.0404C14.4298 36.9094 9.46499 34.1519 6.38387 29.9283C6.51841 28.2604 7.33915 27.0767 8.01189 26.1217L8.10607 25.9872C8.25407 25.772 8.71153 25.1398 8.69807 24.2924C8.68462 23.4315 8.21371 22.8397 7.90425 22.4496C7.85043 22.3824 7.79661 22.3151 7.75625 22.2613C7.17769 21.4408 7.59479 20.0419 8.34825 19.181L8.42898 19.0869C8.81917 18.643 9.47844 17.8897 9.39772 16.8271C9.33044 15.8452 8.61734 14.9574 7.6217 14.6212C6.92205 14.3791 6.23587 14.4194 5.67077 14.5001C5.05185 14.5808 4.44639 14.7153 3.85439 14.8633C6.02059 7.93605 12.5058 2.89195 20.1749 2.89195C20.2153 2.89195 20.2422 2.9054 20.2826 2.9054C20.5247 3.55105 20.9015 4.07563 21.2378 4.55987C21.5608 5.0172 21.8837 5.47453 21.8568 5.757C21.8164 6.29504 20.4037 6.79272 19.556 7.08864L19.4618 7.129C18.0087 7.64013 16.6632 8.37993 15.4389 9.2946C14.7392 9.81919 13.8916 10.5859 13.5418 11.7023C12.9632 13.572 14.053 15.2399 14.8469 16.4505L14.941 16.585C15.5465 17.5131 15.708 18.3067 15.5061 18.5354C15.264 18.8179 14.4432 18.7372 13.0574 18.2933C12.2367 18.0377 11.3217 18.2933 10.6759 18.9793C9.89554 19.8132 9.68027 21.0507 10.0974 22.1402C10.5548 23.3105 11.9003 24.7632 15.5869 25.0187C15.6676 25.0591 15.8156 25.2878 15.8156 25.4492C15.8156 25.5837 15.2909 26.0545 15.0756 26.2562C14.4836 26.7808 13.757 27.4399 13.4341 28.4218C13.2592 28.9599 13.4072 29.5652 13.8243 29.9418C15.6676 31.6501 18.2374 30.6816 20.296 29.9014C20.9822 29.6459 22.1528 29.202 22.7582 29.1885C22.6371 30.0763 22.3008 30.9237 21.8029 31.6501ZM26.4852 35.6853C24.763 35.6719 24.3593 35.3491 23.9422 35.0128C23.6597 34.7841 23.5117 34.4882 23.5386 34.3402C23.5655 34.1654 23.7808 33.8695 23.9691 33.6004L24.1844 33.3045C25.1397 31.9056 25.6913 30.2243 25.7317 28.5429C25.7452 28.2604 25.6644 27.978 25.5164 27.7358C24.0633 25.4223 21.3051 26.4714 19.2869 27.2247C18.7891 27.413 18.2509 27.6148 17.7396 27.7762C18.2913 27.1843 18.7756 26.4311 18.7353 25.3954C18.6949 23.9292 17.5378 22.2882 15.8694 22.1806C14.1607 22.0595 13.2996 21.6426 12.9632 21.3332C14.3221 21.6964 16.3942 22.0057 17.6993 20.4589C18.8564 19.1003 18.7218 17.123 17.3494 15.0381L17.2553 14.8902C16.7171 14.0831 16.1251 13.1685 16.3 12.5901C16.4076 12.2538 16.8516 11.8906 17.1745 11.6351C18.1567 10.8953 19.2465 10.3034 20.4171 9.88644L20.5113 9.84609C22.1124 9.28115 24.5477 8.42029 24.7361 6.01257C24.8302 4.92304 24.3728 4.06218 23.9019 3.34928C25.947 3.82007 27.8845 4.64057 29.6201 5.81081L26.0143 10.8146C24.763 12.5632 25.1262 13.9621 25.9066 14.6884C26.391 15.1323 26.9695 15.2668 27.3059 15.3475C28.0055 15.4955 28.7186 15.5762 29.4452 15.6031C29.499 16.4774 29.3914 17.3383 29.1088 18.1722C28.9474 18.643 29.055 19.1676 29.3779 19.5577C30.1045 20.432 31.4365 20.5799 32.5936 19.9074C32.7147 19.8401 33.1991 19.5308 33.2529 19.4904C33.3605 19.5577 33.5489 19.7056 33.67 19.7998C34.1812 20.2033 34.8674 20.7548 35.8631 20.7682H35.89C36.3205 20.7682 36.7242 20.6606 37.1144 20.4589C36.8856 27.3323 32.5532 33.2104 26.4852 35.6853Z" fill="white"/>
@@ -386,7 +350,7 @@
                         </div>
                         <p class="text-center">An educational approach that makes children sensitive to respect for nature</p>
                     </div>
-                    <div class="w-full md:w-1/4 md:p-10 flex flex-col items-center justify-center">
+                    <div class="w-1/2 md:w-1/4 p-2 md:p-10 flex flex-col items-center justify-center">
                         <div class="flex items-center justify-center h-20 w-20">
                             <svg width="65" height="60" viewBox="0 0 65 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1_216)">
@@ -403,7 +367,7 @@
                         </div>
                         <p class="text-center">Teams who are oriented in their everyday actions towards behaving as an eco-citizen.</p>
                     </div>
-                    <div class="w-full md:w-1/4 md:p-10 flex flex-col items-center justify-center">
+                    <div class="w-1/2 md:w-1/4 p-2 md:p-10 flex flex-col items-center justify-center">
                         <div class="flex items-center justify-center h-20 w-20">
                             <svg width="59" height="67" viewBox="0 0 59 67" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1_193)">
@@ -419,7 +383,7 @@
                         </div>
                         <p class="text-center">Selecting local suppliers who are respectful of the environment.</p>
                     </div>
-                    <div class="w-full md:w-1/4 md:p-10 flex flex-col items-center justify-center">
+                    <div class="w-1/2 md:w-1/4 p-2 md:p-10 flex flex-col items-center justify-center">
                         <div class="flex items-center justify-center h-20 w-20">
                             <svg width="59" height="70" viewBox="0 0 59 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1_196)">
@@ -453,101 +417,109 @@
                         <p class="text-center">Buildings with high energy standards and/or use of renewable energy.</p>
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="text-center pb-4 md:pb-0">
                     <button class="py-4 pop-red-text px-12 rounded-full bg-white">read more</button>
                 </div>
             </div>
         </section>
 
-        <section class="pt-12">
+        <section class="md:pt-12 px-3">
             <div class="section">
                 <h2 class="pop-text-xl pop-text-color text-semibold">Instagram @pop_e_poppa</h2>
-                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                    <div class="w-full md:w-1/4">
-                        <img style="width:255px;height:255px;" class="rounded-xl object-cover" src="./images/image 7.png" alt="">
+                <div class="flex flex-wrap">
+                    <div class="w-1/2 md:w-1/4 p-2">
+                        <img class="w-full rounded-xl object-cover" src="./images/image 7.png" alt="">
                     </div>
-                    <div class="w-full md:w-1/4">
-                        <img style="width:255px;height:255px;" class="rounded-xl object-cover" src="./images/image 6.png" alt="">
+                    <div class="w-1/2 md:w-1/4 p-2">
+                        <img class="w-full rounded-xl object-cover" src="./images/image 6.png" alt="">
                     </div>
-                    <div class="w-full md:w-1/4">
-                        <img style="width:255px;height:255px;" class="rounded-xl object-cover" src="./images/image 5.png" alt="">
+                    <div class="w-1/2 md:w-1/4 p-2">
+                        <img class="w-full rounded-xl object-cover" src="./images/image 5.png" alt="">
                     </div>
-                    <div class="w-full md:w-1/4">
-                        <img style="width:255px;height:255px;" class="rounded-xl object-cover" src="./images/image 4.png" alt="">
+                    <div class="w-1/2 md:w-1/4 p-2">
+                        <img class="w-full rounded-xl object-cover" src="./images/image 4.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="pt-12">
+        <section class="md:pt-12 px-3">
             <div class="section">
                 <h2 class="pop-text-xl pop-text-color text-semibold">our certificates</h2>
-                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                    <div class="w-full md:w-1/4 h-44 bg-gray-100 rounded-xl relative">
-                        <div class="absolute bottom-3 left-3 w-11/12 rounded-full bg-gray-200 px-6 py-2">pop up Lorem, ipsum dolor sit amet consectetur.</div>
+                <div class="flex flex-wrap">
+                    <div class="w-1/2 md:w-1/4 h-44 p-2 relative">
+                        <div class="bg-gray-100 w-full h-full rounded-xl">
+                            <!-- <div class="absolute bottom-3 left-3 w-11/12 rounded-full bg-gray-200 px-6 py-2">pop up Lorem, ipsum dolor sit amet consectetur.</div> -->
+                        </div>
                     </div>
-                    <div class="w-full md:w-1/4 h-44 bg-gray-100 rounded-xl">
+                    <div class="w-1/2 md:w-1/4 h-44 p-2">
+                        <div class="bg-gray-100 w-full h-full rounded-xl"></div>
                         
                     </div>
-                    <div class="w-full md:w-1/4 h-44 bg-gray-100 rounded-xl">
+                    <div class="w-1/2 md:w-1/4 h-44 p-2">
+                        <div class="bg-gray-100 w-full h-full rounded-xl"></div>
                         
                     </div>
-                    <div class="w-full md:w-1/4 h-44 bg-gray-100 rounded-xl">
+                    <div class="w-1/2 md:w-1/4 h-44 p-2">
+                        <div class="bg-gray-100 w-full h-full rounded-xl"></div>
                         
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="pt-12">
+        <section class="md:pt-12 px-3">
             <div class="section">
-                <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center">
                     <h2 class="pop-text-xl pop-text-color text-semibold">news and events</h2>
-                    <a href="#" class="pop-red-text">all news</a>
+                    <a href="#" class="pop-red-text hidden md:block">all news</a>
                 </div>
                 <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6">
-                    <div class="w-full md:w-1/3 relative" style="width: 350px;height: 390px;">
+                    <div class="w-full md:w-1/3 relative" style="height: 390px;">
                         <img class="rounded-2xl object-cover absolute h-full w-full" src="./images/image 9.png" alt="">
                         <div class="absolute w-full h-full rounded-2xl gradient-bg">
                             <div class="flex flex-col h-full justify-end p-5">
                                 <p class="text-white pop-text-lg">parents and me-time: an instruction manual nstruction manual</p>
                                 <div class="flex justify-between text-white">
                                     <span>july 29, 2020</span>
-                                    <a href="#">read more</a>
+                                    <a href="#" class="underline">read more</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/3 relative" style="width: 350px;height: 390px;">
+                    <div class="w-full md:w-1/3 relative" style="height: 390px;">
                         <img class="rounded-2xl object-cover absolute h-full w-full" src="./images/mi-pham-FtZL0r4DZYk-unsplash 1.png" alt="">
                         <div class="absolute w-full h-full rounded-2xl gradient-bg">
                             <div class="flex flex-col h-full justify-end p-5">
                                 <p class="text-white pop-text-lg">parents and me-time: an instruction manual nstruction manual</p>
                                 <div class="flex justify-between text-white">
                                     <span>july 29, 2020</span>
-                                    <a href="#">read more</a>
+                                    <a href="#" class="underline">read more</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/3 relative" style="width: 350px;height: 390px;">
+                    <div class="w-full md:w-1/3 relative" style="height: 390px;">
                         <img class="rounded-2xl object-cover absolute h-full w-full" src="./images/karl-fredrickson-GEJxI_QRPwM-unsplash 1.png" alt="">
                         <div class="absolute w-full h-full rounded-2xl gradient-bg">
                             <div class="flex flex-col h-full justify-end p-5">
                                 <p class="text-white pop-text-lg">parents and me-time: an instruction manual nstruction manual</p>
                                 <div class="flex justify-between text-white">
                                     <span>july 29, 2020</span>
-                                    <a href="#">read more</a>
+                                    <a href="#" class="underline">read more</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="text-center mt-4">
+                    <button class="py-4 text-white pop-red-bg px-12 rounded-full bg-white focus:outline-none">all news</button>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="w-11/12 mx-auto mt-16 h-28">
+    <footer class="mx-auto mt-6 md:mt-16 h-28">
         <div class="footer"></div>
     </footer>
 
