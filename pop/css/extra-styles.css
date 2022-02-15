@@ -204,6 +204,9 @@ header select {
     border-radius: 50px;
 }
 
+.certificate:hover .pop-up {
+    display: block;
+}
 
 
 /* Utilities */
@@ -226,7 +229,15 @@ header select {
     font-size: 20px;
     line-height: 26px;
 }
-
+.pop-up {
+    font-family: Caecilia LT Roman;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
 
 /* Cards section */
 .card {
