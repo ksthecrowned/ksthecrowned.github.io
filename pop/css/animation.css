@@ -94,6 +94,9 @@ section.hero-section .hero-container button {
     section.hero-section {
         height: 100vh;
     }
+    section.hero-section img.hero-image {
+        object-fit: cover;
+    }
 }
 
 /* Select */
