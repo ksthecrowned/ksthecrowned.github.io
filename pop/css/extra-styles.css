@@ -46,7 +46,7 @@
     }
 }
 
-.section, .footer {
+.section, .footer, .navbar-area, .hero-content {
     margin: 0 auto;
     width: 100%;
     max-width: 1000px;
@@ -96,7 +96,6 @@ section.hero-section .hero-container {
     width: 100%;
     max-width: 494px;
     height: 100%;
-    left: 10%;
     top: 32%;
 } 
 
@@ -153,11 +152,10 @@ section.hero-section .hero-container button {
     }
     section.hero-section img.hero-image {
         object-fit: cover;
-        background-position: bottom;
+        object-position: right;
     }
     section.hero-section .hero-container {
         left: 0;
-        top: 1%;
         padding: 15px;
     }
     section.hero-section .hero-container h1 {
@@ -183,8 +181,8 @@ select::-ms-expand {
 }
 
 header .select {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     border: 2px solid #BA0029;
     border-radius: 50%;
 }
