@@ -7,9 +7,6 @@
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/extra-styles.css" rel="stylesheet">
 
-    <!-- font -->
-    <link href="//db.onlinewebfonts.com/c/a900db2b0a40910b1f584fbed5e438e8?family=Caecilia+LT+Std+55+Roman" rel="stylesheet" type="text/css"/>
-
     <!-- font awesome cdn for icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 </head>
@@ -28,13 +25,21 @@
                         <li class="p-3 md:p-5"><a href="#">About</a></li>
                         <li class="p-3 md:p-5"><a href="#">Blog</a></li>
                         <li class="p-3 md:p-5"><a href="#">Login</a></li>
-                        <li class="p-3 md:p-5 flex items-center justify-center select mt-2">
+                        <div class="cursor-pointer lang-select p-3 md:p-5 relative select flex justify-center items-center mt-2">
+                            <span class="mt-2">EN</span>
+                            <ul class="flex flex-col absolute bg-white lang-list">
+                                <li class="p-1">EN</li>
+                                <li class="p-1">DE</li>
+                                <li class="p-1">FR</li>
+                            </ul>
+                        </div>
+                        <!-- <li class="p-3 md:p-5 flex items-center justify-center select mt-2">
                             <select class="flex items-center justify-center relative focus:outline-none" name="" id="">
                                 <option value="">EN</option>
                                 <option value="">DE</option>
                                 <option value="">FR</option>
                             </select>
-                        </li>
+                        </li> -->
                     </ul>
             
                     <!-- nav-toggler for mobile version only -->
